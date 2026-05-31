@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Am I Job-Ready in Dubai? — Self-Audit by Aasha</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9922A;
+    --gold-light: #F5E6C8;
+    --gold-dark: #9A6E1E;
+    --dark: #0D0D0D;
+    --dark2: #111111;
+    --dark3: #1A1A1A;
+    --teal: #0F7C7C;
+    --teal-light: #E6F5F5;
+    --white: #FFFFFF;
+    --gray1: #F7F7F5;
+    --gray2: #CCCCCC;
+    --gray3: #888888;
+    --gray4: #444444;
+    --green: #1A7A4A;
+    --amber: #D4860A;
+    --red: #B83232;
+    --radius: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+    z-index: 100;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--gold);
+    transition: width 0.5s cubic-bezier(.4,0,.2,1);
+    width: 0%;
+  }
+
+  /* ── SCREENS ── */
+  .screen {
+    display: none;
+    min-height: 100vh;
+    padding: 60px 24px 40px;
+    max-width: 640px;
+    margin: 0 auto;
+    animation: fadeUp 0.4s ease both;
+  }
+  .screen.active { display: flex; flex-direction: column; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── COVER SCREEN ── */
+  #screen-cover {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 6px 18px;
+    border-radius: 99px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(44px, 10vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+  .cover-title .line-gold { color: var(--gold); }
+
+  .cover-sub {
+    font-size: 15px;
+    color: var(--gray2);
+    max-width: 380px;
+    margin: 0 auto 36px;
+  }
+  .cover-sub strong { color: var(--white); }
+
+  .cover-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--gold);
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray3);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 99px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: #DFA535;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(201,146,42,0.35);
+  }
+  .btn-primary:active { transform: translateY(0); }
+
+  .cover-by {
+    margin-top: 36px;
+    font-size: 12px;
+    color: var(--gray3);
+    letter-spacing: 0.5px;
+  }
+  .cover-by span { color: var(--gold); font-weight: 600; }
+
+  /* ── SECTION SCREEN ── */
+  .section-screen {
+    padding-top: 60px;
+  }
+
+  .section-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .section-num {
+    width: 32px; height: 32px;
+    background: var(--gold);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-of {
+    font-size: 12px;
+    color: var(--gray3);
+    letter-spacing: 0.5px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 6vw, 36px);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    font-size: 13px;
+    color: var(--gray3);
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  /* ── CHECKLIST ITEMS ── */
+  .check-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+
+  .check-item {
+    background: var(--dark3);
+    border: 1.5px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .check-item:hover {
+    border-color: rgba(201,146,42,0.4);
+    background: #1C1C1C;
+  }
+  .check-item.checked {
+    border-color: var(--teal);
+    background: rgba(15,124,124,0.08);
+  }
+
+  .checkbox {
+    width: 20px; height: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+    background: transparent;
+  }
+  .check-item.checked .checkbox {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+  .checkmark {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s;
+    color: white;
+    font-size: 12px;
+  }
+  .check-item.checked .checkmark {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .check-text { flex: 1; }
+  .check-main {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .check-note {
+    font-size: 12px;
+    color: var(--gray3);
+    line-height: 1.5;
+  }
+
+  /* ── SECTION SCORE MINI ── */
+  .section-score-bar {
+    background: var(--dark3);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .ssb-label { font-size: 12px; color: var(--gray3); }
+  .ssb-score {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--gold);
+  }
+  .ssb-dots { display: flex; gap: 5px; }
+  .ssb-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.3s;
+  }
+  .ssb-dot.filled { background: var(--teal); }
+
+  /* ── NAV ── */
+  .nav-row {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 12px;
+  }
+  .btn-back {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.12);
+    color: var(--gray2);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 24px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-back:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
+
+  .btn-next {
+    flex: 1;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 99px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    letter-spacing: 0.2px;
+  }
+  .btn-next:hover {
+    background: #DFA535;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(201,146,42,0.3);
+  }
+  .btn-next:disabled {
+    background: rgba(201,146,42,0.25);
+    color: rgba(13,13,13,0.4);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ── RESULTS SCREEN ── */
+  #screen-results {
+    padding-top: 60px;
+  }
+
+  .result-header { text-align: center; margin-bottom: 32px; }
+  .result-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    border-radius: 99px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .result-score-big {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .result-score-denom {
+    font-size: 13px;
+    color: var(--gray3);
+    margin-bottom: 14px;
+  }
+  .result-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .result-desc {
+    font-size: 14px;
+    color: var(--gray2);
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Score breakdown */
+  .breakdown {
+    background: var(--dark3);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .breakdown-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--gray3);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .breakdown-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .breakdown-row:last-child { margin-bottom: 0; }
+  .breakdown-label {
+    font-size: 12px;
+    color: var(--gray2);
+    width: 150px;
+    flex-shrink: 0;
+  }
+  .breakdown-bar-wrap {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .breakdown-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    background: var(--teal);
+    transition: width 0.8s cubic-bezier(.4,0,.2,1);
+  }
+  .breakdown-score {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    width: 30px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* Lowest section callout */
+  .gap-callout {
+    border: 1.5px solid rgba(201,146,42,0.4);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 24px;
+    background: rgba(201,146,42,0.05);
+  }
+  .gap-callout-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .gap-callout-text {
+    font-size: 13px;
+    color: var(--gray2);
+    line-height: 1.6;
+  }
+  .gap-callout-text strong { color: var(--white); }
+
+  /* ── NOTE FROM AASHA ── */
+  .aasha-note {
+    background: var(--dark3);
+    border-radius: var(--radius);
+    padding: 22px;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--gold);
+  }
+  .aasha-note-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .aasha-note-text {
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.8;
+    font-style: italic;
+  }
+  .aasha-note-sig {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--gray3);
+    font-style: normal;
+  }
+  .aasha-note-sig strong { color: var(--gold); }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--gold);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .cta-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+  .cta-block p {
+    font-size: 13px;
+    color: rgba(13,13,13,0.65);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .btn-book {
+    display: inline-block;
+    background: var(--dark);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 36px;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    letter-spacing: 0.3px;
+  }
+  .btn-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .cta-handle {
+    margin-top: 14px;
+    font-size: 12px;
+    color: rgba(13,13,13,0.5);
+  }
+
+  .retake-btn {
+    width: 100%;
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.1);
+    color: var(--gray3);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 13px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    margin-bottom: 32px;
+  }
+  .retake-btn:hover {
+    border-color: rgba(255,255,255,0.25);
+    color: var(--gray2);
+  }
+
+  /* Color helpers */
+  .c-green  { color: #2ECC71; }
+  .c-teal   { color: var(--teal); }
+  .c-gold   { color: var(--gold); }
+  .c-red    { color: #E74C3C; }
+  .bg-green { background: var(--green); color: white; }
+  .bg-teal  { background: var(--teal);  color: white; }
+  .bg-gold  { background: var(--gold);  color: var(--dark); }
+  .bg-red   { background: var(--red);   color: white; }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 24px 0;
+  }
+
+  /* Copyright footer */
+  .copyright {
+    text-align: center;
+    font-size: 11px;
+    color: var(--gray3);
+    padding: 20px 0 8px;
+    letter-spacing: 0.3px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 28px;
+  }
+  .copyright a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<div class="screen active" id="screen-cover">
+  <div class="cover-badge">Free Self-Audit</div>
+  <h1 class="cover-title">
+    Am I<br>
+    <span class="line-gold">Job-Ready</span><br>
+    in Dubai?
+  </h1>
+  <p class="cover-sub">
+    The honest self-audit for <strong>Indian expats</strong> restarting their IT career in UAE.
+    25 questions. 5 minutes. A clear answer.
+  </p>
+
+  <div class="cover-stats">
+    <div class="stat">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Sections</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">25</div>
+      <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">~5</div>
+      <div class="stat-label">Minutes</div>
+    </div>
+  </div>
+
+  <button class="btn-primary" onclick="startQuiz()">Start the Audit →</button>
+
+  <p class="cover-by">by <span>Aasha</span> · Senior IT Professional · Dubai</p>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<!-- ═══════════════ SECTION SCREENS ═══════════════ -->
+<div class="screen section-screen" id="screen-0">
+  <div class="section-tag">
+    <div class="section-num">1</div>
+    <div class="section-of">Section 1 of 5</div>
+  </div>
+  <h2 class="section-title">Your CV</h2>
+  <p class="section-sub">Is your CV speaking the UAE market's language?</p>
+
+  <div class="check-list" id="list-0"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-0">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-0"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-next" id="next-0" onclick="nextSection(0)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-1">
+  <div class="section-tag">
+    <div class="section-num">2</div>
+    <div class="section-of">Section 2 of 5</div>
+  </div>
+  <h2 class="section-title">Your LinkedIn</h2>
+  <p class="section-sub">UAE recruiters search LinkedIn daily. Are they finding you?</p>
+
+  <div class="check-list" id="list-1"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-1">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-1"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(1)">← Back</button>
+    <button class="btn-next" id="next-1" onclick="nextSection(1)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-2">
+  <div class="section-tag">
+    <div class="section-num">3</div>
+    <div class="section-of">Section 3 of 5</div>
+  </div>
+  <h2 class="section-title">Skills & Certifications</h2>
+  <p class="section-sub">In UAE tech hiring, certifications signal credibility fast.</p>
+
+  <div class="check-list" id="list-2"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-2">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-2"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(2)">← Back</button>
+    <button class="btn-next" id="next-2" onclick="nextSection(2)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-3">
+  <div class="section-tag">
+    <div class="section-num">4</div>
+    <div class="section-of">Section 4 of 5</div>
+  </div>
+  <h2 class="section-title">Job Search Strategy</h2>
+  <p class="section-sub">Are you searching smart — or applying and hoping?</p>
+
+  <div class="check-list" id="list-3"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-3">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-3"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(3)">← Back</button>
+    <button class="btn-next" id="next-3" onclick="nextSection(3)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-4">
+  <div class="section-tag">
+    <div class="section-num">5</div>
+    <div class="section-of">Section 5 of 5</div>
+  </div>
+  <h2 class="section-title">Mindset & Readiness</h2>
+  <p class="section-sub">The invisible factor that separates expats who get hired from those who don't.</p>
+
+  <div class="check-list" id="list-4"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-4">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-4"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(4)">← Back</button>
+    <button class="btn-next" id="next-4" onclick="showResults()">See My Results →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<!-- ═══════════════ RESULTS ═══════════════ -->
+<div class="screen" id="screen-results">
+
+  <div class="result-header">
+    <div class="result-badge" id="result-badge"></div>
+    <div class="result-score-big" id="result-score-big"></div>
+    <div class="result-score-denom">out of 25</div>
+    <div class="result-label" id="result-label"></div>
+    <p class="result-desc" id="result-desc"></p>
+  </div>
+
+  <div class="breakdown">
+    <div class="breakdown-title">Score Breakdown</div>
+    <div id="breakdown-rows"></div>
+  </div>
+
+  <div class="gap-callout" id="gap-callout"></div>
+
+  <div class="divider"></div>
+
+  <!-- NOTE FROM AASHA -->
+  <div class="aasha-note">
+    <div class="aasha-note-label">A note from Aasha</div>
+    <p class="aasha-note-text" id="aasha-personalised-note"></p>
+    <div class="aasha-note-sig">— <strong>Aasha</strong> · Senior IT Professional · Dubai · <em>Hired in 30 days with zero local network</em></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h3>Ready to fast-track your job search?</h3>
+    <p>Book a 1-on-1 Career Audit with Aasha. Bring your scores. Leave with a clear, personalised 30-day action plan.</p>
+    <a href="https://topmate.io/aasha_in_dubai" target="_blank" class="btn-book">Book Your Session with Aasha →</a>
+    <div class="cta-handle">@aasha.in.dubai &nbsp;·&nbsp; Link also in bio</div>
+  </div>
+
+  <button class="retake-btn" onclick="retakeQuiz()">↺ Retake the audit</button>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────
+const sections = [
+  {
+    items: [
+      { main: "My CV is 2 pages or less", note: "UAE recruiters rarely read beyond page 2. Every line must earn its place." },
+      { main: "I have a tailored professional summary at the top", note: "A generic objective wastes prime real estate. Your summary must answer: why hire me, here, now?" },
+      { main: "My CV uses relevant keywords from UAE IT job descriptions", note: "Most UAE employers use ATS filters. The right keywords get you past the system before a human sees your CV." },
+      { main: "Career gaps are addressed with a brief, confident explanation", note: "A gap is not a red flag. Leaving it unexplained is. One clear sentence resolves it." },
+      { main: "I have a UAE phone number and LinkedIn URL on my CV", note: "A local number signals you are in-country and immediately reachable. Recruiters notice its absence." },
+    ]
+  },
+  {
+    items: [
+      { main: "My headline states my target role and UAE availability", note: "Rewrite it: 'Software Engineer | Open to UAE Opportunities' performs far better in recruiter searches." },
+      { main: "I have a professional, clear profile photo", note: "Profiles with photos receive significantly more views. This is the single fastest win on this list." },
+      { main: "My About section explains my background and why I am in Dubai", note: "Recruiters want to know you're committed to this market. Two honest paragraphs is enough." },
+      { main: "I am connected with at least 10 UAE-based IT professionals or recruiters", note: "Ten targeted local connections improve your profile's search visibility immediately." },
+      { main: "I have at least 2 recommendations from past managers or colleagues", note: "Social proof travels across borders. A strong recommendation is worth ten self-descriptions." },
+    ]
+  },
+  {
+    items: [
+      { main: "I hold at least one relevant technical certification", note: "Cloud (AWS, Azure, GCP), cybersecurity, ERP or project management certs are highly valued across UAE IT roles." },
+      { main: "I know which skills are in highest demand in UAE right now", note: "Cloud, cybersecurity, data engineering and low-code platforms dominate UAE IT hiring. Positioning matters." },
+      { main: "My certifications and key skills are clearly listed on my CV and LinkedIn", note: "Credentials not visible to a recruiter do not exist. List each cert with the issuing body and year." },
+      { main: "I have identified my next skill or certification to pursue", note: "Having a current or upcoming certification signals ambition and forward momentum to any hiring manager." },
+      { main: "I can explain how my skills solve a real business problem", note: "UAE employers want impact — cost saved, process improved, system delivered. Quantify your value." },
+    ]
+  },
+  {
+    items: [
+      { main: "I use multiple UAE job portals, not just LinkedIn", note: "Bayt, Naukrigulf, GulfTalent and company career pages are heavily used. Many roles never appear on LinkedIn." },
+      { main: "I have a shortlist of 10–15 target companies in UAE", note: "Mass applications have very low return. Targeted outreach to specific companies produces far better results." },
+      { main: "I have a short, personalised outreach message for UAE recruiters", note: "A well-crafted five-line message to the right recruiter outperforms fifty cold applications." },
+      { main: "I follow up on applications after 5–7 business days", note: "Most candidates apply and disappear. A single polite follow-up dramatically increases your response rate." },
+      { main: "I track every application — company, role, date, status, next action", note: "Without a tracker, momentum collapses. A simple log ensures you never miss a follow-up window." },
+    ]
+  },
+  {
+    items: [
+      { main: "I have told at least 5 people in my network that I am actively looking", note: "A large share of Dubai IT roles are filled through referrals before they are ever advertised." },
+      { main: "I am not waiting for everything to be perfect before I start applying", note: "Perfectionism stalls job searches indefinitely. A solid CV sent today beats a flawless one sent in three months." },
+      { main: "I have a confident answer ready for 'Are you on a dependent visa?'", note: "'Yes, and I am fully authorised to work' — one clear sentence removes the concern professionally." },
+      { main: "I dedicate a fixed number of hours each week to my job search", note: "Even five focused hours a week, applied consistently, produces real results within a month." },
+      { main: "I believe my experience has real value in this market", note: "Your technical skills and international perspective are genuine assets — not in spite of your background, but because of it." },
+    ]
+  }
+];
+
+const sectionNames = ["Your CV", "LinkedIn", "Skills & Certs", "Job Search", "Mindset"];
+
+// ── STATE ──────────────────────────────────────────────────
+let checked = Array.from({length: 5}, () => Array(5).fill(false));
+
+// ── INIT ──────────────────────────────────────────────────
+function buildLists() {
+  sections.forEach((sec, si) => {
+    const list = document.getElementById(`list-${si}`);
+    const dots = document.getElementById(`dots-${si}`);
+    // Build dots
+    for (let i = 0; i < 5; i++) {
+      const d = document.createElement('div');
+      d.className = 'ssb-dot';
+      d.id = `dot-${si}-${i}`;
+      dots.appendChild(d);
+    }
+    // Build items
+    sec.items.forEach((item, ii) => {
+      const div = document.createElement('div');
+      div.className = 'check-item';
+      div.id = `item-${si}-${ii}`;
+      div.innerHTML = `
+        <div class="checkbox"><span class="checkmark">✓</span></div>
+        <div class="check-text">
+          <div class="check-main">${item.main}</div>
+          <div class="check-note">${item.note}</div>
+        </div>`;
+      div.addEventListener('click', () => toggle(si, ii));
+      list.appendChild(div);
+    });
+  });
+}
+
+function toggle(si, ii) {
+  checked[si][ii] = !checked[si][ii];
+  const el = document.getElementById(`item-${si}-${ii}`);
+  el.classList.toggle('checked', checked[si][ii]);
+  updateSectionScore(si);
+}
+
+function updateSectionScore(si) {
+  const score = checked[si].filter(Boolean).length;
+  document.getElementById(`score-display-${si}`).textContent = `${score} / 5`;
+  for (let i = 0; i < 5; i++) {
+    document.getElementById(`dot-${si}-${i}`).classList.toggle('filled', i < score);
+  }
+}
+
+function getTotal() {
+  return checked.flat().filter(Boolean).length;
+}
+
+function getSectionScore(si) {
+  return checked[si].filter(Boolean).length;
+}
+
+// ── NAVIGATION ──────────────────────────────────────────
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById(id);
+  el.classList.add('active');
+  window.scrollTo(0, 0);
+  updateProgress(id);
+}
+
+function updateProgress(screenId) {
+  const map = {
+    'screen-cover': 0,
+    'screen-0': 15,
+    'screen-1': 30,
+    'screen-2': 50,
+    'screen-3': 70,
+    'screen-4': 88,
+    'screen-results': 100
+  };
+  document.getElementById('progressFill').style.width = (map[screenId] || 0) + '%';
+}
+
+function startQuiz()   { showScreen('screen-0'); }
+function nextSection(i){ showScreen(i < 4 ? `screen-${i+1}` : 'screen-results'); }
+function prevSection(i){ showScreen(i > 0 ? `screen-${i-1}` : 'screen-cover'); }
+
+// ── RESULTS ──────────────────────────────────────────────
+function showResults() {
+  const total = getTotal();
+
+  // Band config
+  let band;
+  if (total >= 20)      band = { label: "Ready to Launch",   cls: "bg-green", desc: "You are market-ready. The remaining gaps are refinements, not blockers. Book a session with Aasha to sharpen your pitch and interview technique — and move faster.", note: "You have done the hard work. Your foundation is strong. What I can do for you now is help you compress the time between where you are and where you want to be. One focused session can save you weeks of trial and error." };
+  else if (total >= 13) band = { label: "Strong Foundation", cls: "bg-teal",  desc: "Solid base with clear, identifiable gaps. Focus on your lowest-scoring section first. Four to six weeks of targeted effort will move you fully into ready territory.", note: "You are closer than you think. I was in exactly this position — most things in place but a few gaps holding me back. Identifying what to fix first made everything click into place quickly." };
+  else if (total >= 7)  band = { label: "Building Momentum", cls: "bg-gold",  desc: "You have started, and knowing your gaps clearly is real progress. A focused 30-day plan will create meaningful movement. Do not underestimate how quickly things can shift.", note: "When I first mapped my own readiness, I was in this range. The most important thing I did was stop doing everything at once and focus on one gap at a time. That shift changed everything." };
+  else                  band = { label: "Start Here",         cls: "bg-red",   desc: "This audit has just saved you months of misdirected effort. You now have a precise map of what to build. Every expert started at zero. The only mistake is not starting.", note: "I moved to Dubai with zero local contacts and very little idea of how this market worked. I got hired in 30 days. Not because I had everything figured out — but because I was honest about my gaps and fixed them one by one. That is exactly what this is for." };
+
+  // Lowest section
+  const scores = sectionNames.map((n, i) => ({ name: n, score: getSectionScore(i) }));
+  const lowest = scores.reduce((a, b) => a.score <= b.score ? a : b);
+
+  // Populate
+  document.getElementById('result-badge').textContent  = `Your result`;
+  document.getElementById('result-badge').className    = `result-badge ${band.cls}`;
+  document.getElementById('result-score-big').textContent = total;
+  document.getElementById('result-label').textContent  = band.label;
+  document.getElementById('result-desc').textContent   = band.desc;
+  document.getElementById('aasha-personalised-note').textContent = `"${band.note}"`;
+
+  // Breakdown
+  const bRows = document.getElementById('breakdown-rows');
+  bRows.innerHTML = '';
+  scores.forEach(s => {
+    const pct = (s.score / 5) * 100;
+    bRows.innerHTML += `
+      <div class="breakdown-row">
+        <div class="breakdown-label">${s.name}</div>
+        <div class="breakdown-bar-wrap">
+          <div class="breakdown-bar-fill" style="width:${pct}%"></div>
+        </div>
+        <div class="breakdown-score">${s.score}/5</div>
+      </div>`;
+  });
+
+  // Gap callout
+  document.getElementById('gap-callout').innerHTML = `
+    <div class="gap-callout-label">Your Biggest Opportunity</div>
+    <div class="gap-callout-text">
+      Your lowest score is <strong>${lowest.name} (${lowest.score}/5)</strong>. 
+      This is your bottleneck — one weak area holds back everything else.
+      Start here before spreading effort across other sections.
+    </div>`;
+
+  showScreen('screen-results');
+}
+
+function retakeQuiz() {
+  checked = Array.from({length: 5}, () => Array(5).fill(false));
+  document.querySelectorAll('.check-item').forEach(el => el.classList.remove('checked'));
+  for (let si = 0; si < 5; si++) updateSectionScore(si);
+  showScreen('screen-cover');
+}
+
+// ── BOOT ─────────────────────────────────────────────────
+buildLists();
+</script>
+</body>
+</html>
