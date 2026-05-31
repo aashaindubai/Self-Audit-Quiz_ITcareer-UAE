@@ -1,14 +1,964 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Am I Job-Ready in Dubai? — Self-Audit by Aasha</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"></head><body><div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div><!-- ═══════════════ COVER ═══════════════ --><div class="screen active" id="screen-cover"><div class="cover-badge">Free Self-Audit</div><h1 class="cover-title"> Am I<br><span class="line-gold">Job-Ready</span><br> in Dubai? </h1><p class="cover-sub"> The honest self-audit for <strong>Indian expats</strong> restarting their IT career in UAE. 25 questions. 5 minutes. A clear answer. </p><div class="cover-stats"><div class="stat"><div class="stat-num">5</div><div class="stat-label">Sections</div></div><div class="stat"><div class="stat-num">25</div><div class="stat-label">Questions</div></div><div class="stat"><div class="stat-num">~5</div><div class="stat-label">Minutes</div></div></div><button class="btn-primary" onclick="startQuiz()">Start the Audit →</button><p class="cover-by">by <span>Aasha</span> · Senior IT Professional · Dubai</p><div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div></div><!-- ═══════════════ SECTION SCREENS ═══════════════ --><div class="screen section-screen" id="screen-0"><div class="section-tag"><div class="section-num">1</div><div class="section-of">Section 1 of 5</div></div><h2 class="section-title">Your CV</h2><p class="section-sub">Is your CV speaking the UAE market's language?</p><div class="check-list" id="list-0"></div><div class="section-score-bar"><div><div class="ssb-label">Section score</div><div class="ssb-score" id="score-display-0">0 / 5</div></div><div class="ssb-dots" id="dots-0"></div></div><div class="nav-row"><button class="btn-next" id="next-0" onclick="nextSection(0)">Next Section →</button></div><div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div></div><div class="screen section-screen" id="screen-1"><div class="section-tag"><div class="section-num">2</div><div class="section-of">Section 2 of 5</div></div><h2 class="section-title">Your LinkedIn</h2><p class="section-sub">UAE recruiters search LinkedIn daily. Are they finding you?</p><div class="check-list" id="list-1"></div><div class="section-score-bar"><div><div class="ssb-label">Section score</div><div class="ssb-score" id="score-display-1">0 / 5</div></div><div class="ssb-dots" id="dots-1"></div></div><div class="nav-row"><button class="btn-back" onclick="prevSection(1)">← Back</button><button class="btn-next" id="next-1" onclick="nextSection(1)">Next Section →</button></div><div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div></div><div class="screen section-screen" id="screen-2"><div class="section-tag"><div class="section-num">3</div><div class="section-of">Section 3 of 5</div></div><h2 class="section-title">Skills & Certifications</h2><p class="section-sub">In UAE tech hiring, certifications signal credibility fast.</p><div class="check-list" id="list-2"></div><div class="section-score-bar"><div><div class="ssb-label">Section score</div><div class="ssb-score" id="score-display-2">0 / 5</div></div><div class="ssb-dots" id="dots-2"></div></div><div class="nav-row"><button class="btn-back" onclick="prevSection(2)">← Back</button><button class="btn-next" id="next-2" onclick="nextSection(2)">Next Section →</button></div><div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div></div><div class="screen section-screen" id="screen-3"><div class="section-tag"><div class="section-num">4</div><div class="section-of">Section 4 of 5</div></div><h2 class="section-title">Job Search Strategy</h2><p class="section-sub">Are you searching smart — or applying and hoping?</p><div class="check-list" id="list-3"></div><div class="section-score-bar"><div><div class="ssb-label">Section score</div><div class="ssb-score" id="score-display-3">0 / 5</div></div><div class="ssb-dots" id="dots-3"></div></div><div class="nav-row"><button class="btn-back" onclick="prevSection(3)">← Back</button><button class="btn-next" id="next-3" onclick="nextSection(3)">Next Section →</button></div><div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div></div><div class="screen section-screen" id="screen-4"><div class="section-tag"><div class="section-num">5</div><div class="section-of">Section 5 of 5</div></div><h2 class="section-title">Mindset & Readiness</h2><p class="section-sub">The invisible factor that separates expats who get hired from those who don't.</p><div class="check-list" id="list-4"></div><div class="section-score-bar"><div><div class="ssb-label">Section score</div><div class="ssb-score" id="score-display-4">0 / 5</div></div><div class="ssb-dots" id="dots-4"></div></div><div class="nav-row"><button class="btn-back" onclick="prevSection(4)">← Back</button><button class="btn-next" id="next-4" onclick="showResults()">See My Results →</button></div><div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div></div><!-- ═══════════════ RESULTS ═══════════════ --><div class="screen" id="screen-results"><div class="result-header"><div class="result-badge" id="result-badge"></div><div class="result-score-big" id="result-score-big"></div><div class="result-score-denom">out of 25</div><div class="result-label" id="result-label"></div><p class="result-desc" id="result-desc"></p></div><div class="breakdown"><div class="breakdown-title">Score Breakdown</div><div id="breakdown-rows"></div></div><div class="gap-callout" id="gap-callout"></div><div class="divider"></div><!-- NOTE FROM AASHA --><div class="aasha-note"><div class="aasha-note-label">A note from Aasha</div><p class="aasha-note-text" id="aasha-personalised-note"></p><div class="aasha-note-sig">— <strong>Aasha</strong> · Senior IT Professional · Dubai · <em>Hired in 30 days with zero local network</em></div></div><!-- CTA --><div class="cta-block"><h3>Ready to fast-track your job search?</h3><p>Book a 1-on-1 Career Audit with Aasha. Bring your scores. Leave with a clear, personalised 30-day action plan.</p><a href="https://topmate.io/aasha_in_dubai" target="_blank" class="btn-book">Book Your Session with Aasha →</a><div class="cta-handle">@aasha.in.dubai &nbsp;·&nbsp; Link also in bio</div></div><button class="retake-btn" onclick="retakeQuiz()">↺ Retake the audit</button><div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div></div><script>(function(){
-var _c=["OnJvb3R7LS1nb2xkOiNDOTkyMkE7LS1nb2xkLWxpZ2h0OiNGNUU2Qzg7LS1nb2xkLWRhcms6IzlBNkUx","RTstLWRhcms6IzBEMEQwRDstLWRhcmsyOiMxMTExMTE7LS1kYXJrMzojMUExQTFBOy0tdGVhbDojMEY3","QzdDOy0tdGVhbC1saWdodDojRTZGNUY1Oy0td2hpdGU6I0ZGRkZGRjstLWdyYXkxOiNGN0Y3RjU7LS1n","cmF5MjojQ0NDQ0NDOy0tZ3JheTM6Izg4ODg4ODstLWdyYXk0OiM0NDQ0NDQ7LS1ncmVlbjojMUE3QTRB","Oy0tYW1iZXI6I0Q0ODYwQTstLXJlZDojQjgzMjMyOy0tcmFkaXVzOjEycHg7fSp7Ym94LXNpemluZzpi","b3JkZXItYm94O21hcmdpbjowO3BhZGRpbmc6MDt9Ym9keXtmb250LWZhbWlseTonRE0gU2Fucycsc2Fu","cy1zZXJpZjtiYWNrZ3JvdW5kOnZhcigtLWRhcmspO2NvbG9yOnZhcigtLXdoaXRlKTttaW4taGVpZ2h0","OjEwMHZoO2xpbmUtaGVpZ2h0OjEuNjt9LnByb2dyZXNzLXdyYXB7cG9zaXRpb246Zml4ZWQ7dG9wOjA7","bGVmdDowO3JpZ2h0OjA7aGVpZ2h0OjNweDtiYWNrZ3JvdW5kOnJnYmEoMjU1LDI1NSwyNTUsMC4wOCk7","ei1pbmRleDoxMDA7fS5wcm9ncmVzcy1maWxse2hlaWdodDoxMDAlO2JhY2tncm91bmQ6dmFyKC0tZ29s","ZCk7dHJhbnNpdGlvbjp3aWR0aCAwLjVzIGN1YmljLWJlemllciguNCwwLC4yLDEpO3dpZHRoOjAlO30u","c2NyZWVue2Rpc3BsYXk6bm9uZTttaW4taGVpZ2h0OjEwMHZoO3BhZGRpbmc6NjBweCAyNHB4IDQwcHg7","bWF4LXdpZHRoOjY0MHB4O21hcmdpbjowIGF1dG87YW5pbWF0aW9uOmZhZGVVcCAwLjRzIGVhc2UgYm90","aDt9LnNjcmVlbi5hY3RpdmV7ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbjt9QGtleWZy","YW1lcyBmYWRlVXB7ZnJvbXtvcGFjaXR5OjA7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoMTZweCk7fXRve29w","YWNpdHk6MTt0cmFuc2Zvcm06dHJhbnNsYXRlWSgwKTt9fSNzY3JlZW4tY292ZXJ7anVzdGlmeS1jb250","ZW50OmNlbnRlcjthbGlnbi1pdGVtczpjZW50ZXI7dGV4dC1hbGlnbjpjZW50ZXI7cGFkZGluZy10b3A6","ODBweDt9LmNvdmVyLWJhZGdle2Rpc3BsYXk6aW5saW5lLWJsb2NrO2JhY2tncm91bmQ6dmFyKC0tZ29s","ZCk7Y29sb3I6dmFyKC0tZGFyayk7Zm9udC1zaXplOjEwcHg7Zm9udC13ZWlnaHQ6NjAwO2xldHRlci1z","cGFjaW5nOjJweDtwYWRkaW5nOjZweCAxOHB4O2JvcmRlci1yYWRpdXM6OTlweDttYXJnaW4tYm90dG9t","OjI4cHg7dGV4dC10cmFuc2Zvcm06dXBwZXJjYXNlO30uY292ZXItdGl0bGV7Zm9udC1mYW1pbHk6J1Bs","YXlmYWlyIERpc3BsYXknLHNlcmlmO2ZvbnQtc2l6ZTpjbGFtcCg0NHB4LDEwdncsNzJweCk7bGluZS1o","ZWlnaHQ6MS4wNTttYXJnaW4tYm90dG9tOjIwcHg7fS5jb3Zlci10aXRsZSAubGluZS1nb2xke2NvbG9y","OnZhcigtLWdvbGQpO30uY292ZXItc3Vie2ZvbnQtc2l6ZToxNXB4O2NvbG9yOnZhcigtLWdyYXkyKTtt","YXgtd2lkdGg6MzgwcHg7bWFyZ2luOjAgYXV0byAzNnB4O30uY292ZXItc3ViIHN0cm9uZ3tjb2xvcjp2","YXIoLS13aGl0ZSk7fS5jb3Zlci1zdGF0c3tkaXNwbGF5OmZsZXg7anVzdGlmeS1jb250ZW50OmNlbnRl","cjtnYXA6MzJweDttYXJnaW4tYm90dG9tOjQwcHg7fS5zdGF0e3RleHQtYWxpZ246Y2VudGVyO30uc3Rh","dC1udW17Zm9udC1mYW1pbHk6J1BsYXlmYWlyIERpc3BsYXknLHNlcmlmO2ZvbnQtc2l6ZToyOHB4O2Nv","bG9yOnZhcigtLWdvbGQpO30uc3RhdC1sYWJlbHtmb250LXNpemU6MTFweDtjb2xvcjp2YXIoLS1ncmF5","Myk7bGV0dGVyLXNwYWNpbmc6MC41cHg7bWFyZ2luLXRvcDoycHg7fS5idG4tcHJpbWFyeXtkaXNwbGF5","OmlubGluZS1ibG9jaztiYWNrZ3JvdW5kOnZhcigtLWdvbGQpO2NvbG9yOnZhcigtLWRhcmspO2ZvbnQt","ZmFtaWx5OidETSBTYW5zJyxzYW5zLXNlcmlmO2ZvbnQtc2l6ZToxNXB4O2ZvbnQtd2VpZ2h0OjYwMDtw","YWRkaW5nOjE2cHggNDBweDtib3JkZXItcmFkaXVzOjk5cHg7Ym9yZGVyOm5vbmU7Y3Vyc29yOnBvaW50","ZXI7bGV0dGVyLXNwYWNpbmc6MC4zcHg7dHJhbnNpdGlvbjp0cmFuc2Zvcm0gMC4xNXMsYm94LXNoYWRv","dyAwLjE1cyxiYWNrZ3JvdW5kIDAuMTVzO3RleHQtZGVjb3JhdGlvbjpub25lO30uYnRuLXByaW1hcnk6","aG92ZXJ7YmFja2dyb3VuZDojREZBNTM1O3RyYW5zZm9ybTp0cmFuc2xhdGVZKC0xcHgpO2JveC1zaGFk","b3c6MCA4cHggMjRweCByZ2JhKDIwMSwxNDYsNDIsMC4zNSk7fS5idG4tcHJpbWFyeTphY3RpdmV7dHJh","bnNmb3JtOnRyYW5zbGF0ZVkoMCk7fS5jb3Zlci1ieXttYXJnaW4tdG9wOjM2cHg7Zm9udC1zaXplOjEy","cHg7Y29sb3I6dmFyKC0tZ3JheTMpO2xldHRlci1zcGFjaW5nOjAuNXB4O30uY292ZXItYnkgc3Bhbntj","b2xvcjp2YXIoLS1nb2xkKTtmb250LXdlaWdodDo2MDA7fS5zZWN0aW9uLXNjcmVlbntwYWRkaW5nLXRv","cDo2MHB4O30uc2VjdGlvbi10YWd7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6MTBw","eDttYXJnaW4tYm90dG9tOjIwcHg7fS5zZWN0aW9uLW51bXt3aWR0aDozMnB4O2hlaWdodDozMnB4O2Jh","Y2tncm91bmQ6dmFyKC0tZ29sZCk7Y29sb3I6dmFyKC0tZGFyayk7Zm9udC13ZWlnaHQ6NzAwO2ZvbnQt","c2l6ZToxNHB4O2JvcmRlci1yYWRpdXM6OHB4O2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7","anVzdGlmeS1jb250ZW50OmNlbnRlcjtmbGV4LXNocmluazowO30uc2VjdGlvbi1vZntmb250LXNpemU6","MTJweDtjb2xvcjp2YXIoLS1ncmF5Myk7bGV0dGVyLXNwYWNpbmc6MC41cHg7fS5zZWN0aW9uLXRpdGxl","e2ZvbnQtZmFtaWx5OidQbGF5ZmFpciBEaXNwbGF5JyxzZXJpZjtmb250LXNpemU6Y2xhbXAoMjZweCw2","dncsMzZweCk7bGluZS1oZWlnaHQ6MS4xNTttYXJnaW4tYm90dG9tOjhweDt9LnNlY3Rpb24tc3Vie2Zv","bnQtc2l6ZToxM3B4O2NvbG9yOnZhcigtLWdyYXkzKTttYXJnaW4tYm90dG9tOjI4cHg7cGFkZGluZy1i","b3R0b206MjBweDtib3JkZXItYm90dG9tOjFweCBzb2xpZCByZ2JhKDI1NSwyNTUsMjU1LDAuMDcpO30u","Y2hlY2stbGlzdHtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO2dhcDoxMHB4O21hcmdp","bi1ib3R0b206MjhweDt9LmNoZWNrLWl0ZW17YmFja2dyb3VuZDp2YXIoLS1kYXJrMyk7Ym9yZGVyOjEu","NXB4IHNvbGlkIHJnYmEoMjU1LDI1NSwyNTUsMC4wNik7Ym9yZGVyLXJhZGl1czoxMHB4O3BhZGRpbmc6","MTRweCAxNnB4O2N1cnNvcjpwb2ludGVyO3RyYW5zaXRpb246Ym9yZGVyLWNvbG9yIDAuMnMsYmFja2dy","b3VuZCAwLjJzO2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpmbGV4LXN0YXJ0O2dhcDoxNHB4Oy13ZWJr","aXQtdGFwLWhpZ2hsaWdodC1jb2xvcjp0cmFuc3BhcmVudDt9LmNoZWNrLWl0ZW06aG92ZXJ7Ym9yZGVy","LWNvbG9yOnJnYmEoMjAxLDE0Niw0MiwwLjQpO2JhY2tncm91bmQ6IzFDMUMxQzt9LmNoZWNrLWl0ZW0u","Y2hlY2tlZHtib3JkZXItY29sb3I6dmFyKC0tdGVhbCk7YmFja2dyb3VuZDpyZ2JhKDE1LDEyNCwxMjQs","MC4wOCk7fS5jaGVja2JveHt3aWR0aDoyMHB4O2hlaWdodDoyMHB4O2JvcmRlcjoycHggc29saWQgcmdi","YSgyNTUsMjU1LDI1NSwwLjIpO2JvcmRlci1yYWRpdXM6NXB4O2ZsZXgtc2hyaW5rOjA7bWFyZ2luLXRv","cDoxcHg7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVy","O3RyYW5zaXRpb246YWxsIDAuMnM7YmFja2dyb3VuZDp0cmFuc3BhcmVudDt9LmNoZWNrLWl0ZW0uY2hl","Y2tlZCAuY2hlY2tib3h7YmFja2dyb3VuZDp2YXIoLS10ZWFsKTtib3JkZXItY29sb3I6dmFyKC0tdGVh","bCk7fS5jaGVja21hcmt7b3BhY2l0eTowO3RyYW5zZm9ybTpzY2FsZSgwLjUpO3RyYW5zaXRpb246YWxs","IDAuMnM7Y29sb3I6d2hpdGU7Zm9udC1zaXplOjEycHg7fS5jaGVjay1pdGVtLmNoZWNrZWQgLmNoZWNr","bWFya3tvcGFjaXR5OjE7dHJhbnNmb3JtOnNjYWxlKDEpO30uY2hlY2stdGV4dHtmbGV4OjE7fS5jaGVj","ay1tYWlue2ZvbnQtc2l6ZToxNHB4O2ZvbnQtd2VpZ2h0OjUwMDtjb2xvcjp2YXIoLS13aGl0ZSk7bGlu","ZS1oZWlnaHQ6MS40O21hcmdpbi1ib3R0b206NHB4O30uY2hlY2stbm90ZXtmb250LXNpemU6MTJweDtj","b2xvcjp2YXIoLS1ncmF5Myk7bGluZS1oZWlnaHQ6MS41O30uc2VjdGlvbi1zY29yZS1iYXJ7YmFja2dy","b3VuZDp2YXIoLS1kYXJrMyk7Ym9yZGVyLXJhZGl1czoxMHB4O3BhZGRpbmc6MTRweCAxNnB4O2Rpc3Bs","YXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7anVzdGlmeS1jb250ZW50OnNwYWNlLWJldHdlZW47bWFy","Z2luLWJvdHRvbToyNHB4O30uc3NiLWxhYmVse2ZvbnQtc2l6ZToxMnB4O2NvbG9yOnZhcigtLWdyYXkz","KTt9LnNzYi1zY29yZXtmb250LWZhbWlseTonUGxheWZhaXIgRGlzcGxheScsc2VyaWY7Zm9udC1zaXpl","OjIycHg7Y29sb3I6dmFyKC0tZ29sZCk7fS5zc2ItZG90c3tkaXNwbGF5OmZsZXg7Z2FwOjVweDt9LnNz","Yi1kb3R7d2lkdGg6MTBweDtoZWlnaHQ6MTBweDtib3JkZXItcmFkaXVzOjUwJTtiYWNrZ3JvdW5kOnJn","YmEoMjU1LDI1NSwyNTUsMC4xKTt0cmFuc2l0aW9uOmJhY2tncm91bmQgMC4zczt9LnNzYi1kb3QuZmls","bGVke2JhY2tncm91bmQ6dmFyKC0tdGVhbCk7fS5uYXYtcm93e2Rpc3BsYXk6ZmxleDtnYXA6MTJweDtt","YXJnaW4tdG9wOmF1dG87cGFkZGluZy10b3A6MTJweDt9LmJ0bi1iYWNre2JhY2tncm91bmQ6dHJhbnNw","YXJlbnQ7Ym9yZGVyOjEuNXB4IHNvbGlkIHJnYmEoMjU1LDI1NSwyNTUsMC4xMik7Y29sb3I6dmFyKC0t","Z3JheTIpO2ZvbnQtZmFtaWx5OidETSBTYW5zJyxzYW5zLXNlcmlmO2ZvbnQtc2l6ZToxNHB4O2ZvbnQt","d2VpZ2h0OjUwMDtwYWRkaW5nOjE0cHggMjRweDtib3JkZXItcmFkaXVzOjk5cHg7Y3Vyc29yOnBvaW50","ZXI7dHJhbnNpdGlvbjpib3JkZXItY29sb3IgMC4ycyxjb2xvciAwLjJzO30uYnRuLWJhY2s6aG92ZXJ7","Ym9yZGVyLWNvbG9yOnJnYmEoMjU1LDI1NSwyNTUsMC4zKTtjb2xvcjp2YXIoLS13aGl0ZSk7fS5idG4t","bmV4dHtmbGV4OjE7YmFja2dyb3VuZDp2YXIoLS1nb2xkKTtjb2xvcjp2YXIoLS1kYXJrKTtmb250LWZh","bWlseTonRE0gU2Fucycsc2Fucy1zZXJpZjtmb250LXNpemU6MTVweDtmb250LXdlaWdodDo2MDA7cGFk","ZGluZzoxNHB4IDI0cHg7Ym9yZGVyLXJhZGl1czo5OXB4O2JvcmRlcjpub25lO2N1cnNvcjpwb2ludGVy","O3RyYW5zaXRpb246dHJhbnNmb3JtIDAuMTVzLGJveC1zaGFkb3cgMC4xNXMsYmFja2dyb3VuZCAwLjE1","cztsZXR0ZXItc3BhY2luZzowLjJweDt9LmJ0bi1uZXh0OmhvdmVye2JhY2tncm91bmQ6I0RGQTUzNTt0","cmFuc2Zvcm06dHJhbnNsYXRlWSgtMXB4KTtib3gtc2hhZG93OjAgNnB4IDIwcHggcmdiYSgyMDEsMTQ2","LDQyLDAuMyk7fS5idG4tbmV4dDpkaXNhYmxlZHtiYWNrZ3JvdW5kOnJnYmEoMjAxLDE0Niw0MiwwLjI1","KTtjb2xvcjpyZ2JhKDEzLDEzLDEzLDAuNCk7Y3Vyc29yOm5vdC1hbGxvd2VkO3RyYW5zZm9ybTpub25l","O2JveC1zaGFkb3c6bm9uZTt9I3NjcmVlbi1yZXN1bHRze3BhZGRpbmctdG9wOjYwcHg7fS5yZXN1bHQt","aGVhZGVye3RleHQtYWxpZ246Y2VudGVyO21hcmdpbi1ib3R0b206MzJweDt9LnJlc3VsdC1iYWRnZXtk","aXNwbGF5OmlubGluZS1ibG9jaztmb250LXNpemU6MTBweDtmb250LXdlaWdodDo2MDA7bGV0dGVyLXNw","YWNpbmc6MnB4O3BhZGRpbmc6NnB4IDE2cHg7Ym9yZGVyLXJhZGl1czo5OXB4O21hcmdpbi1ib3R0b206","MTZweDt0ZXh0LXRyYW5zZm9ybTp1cHBlcmNhc2U7fS5yZXN1bHQtc2NvcmUtYmlne2ZvbnQtZmFtaWx5","OidQbGF5ZmFpciBEaXNwbGF5JyxzZXJpZjtmb250LXNpemU6ODBweDtsaW5lLWhlaWdodDoxO2NvbG9y","OnZhcigtLWdvbGQpO21hcmdpbi1ib3R0b206NHB4O30ucmVzdWx0LXNjb3JlLWRlbm9te2ZvbnQtc2l6","ZToxM3B4O2NvbG9yOnZhcigtLWdyYXkzKTttYXJnaW4tYm90dG9tOjE0cHg7fS5yZXN1bHQtbGFiZWx7","Zm9udC1mYW1pbHk6J1BsYXlmYWlyIERpc3BsYXknLHNlcmlmO2ZvbnQtc2l6ZToyNnB4O21hcmdpbi1i","b3R0b206MTBweDt9LnJlc3VsdC1kZXNje2ZvbnQtc2l6ZToxNHB4O2NvbG9yOnZhcigtLWdyYXkyKTtt","YXgtd2lkdGg6NDIwcHg7bWFyZ2luOjAgYXV0bztsaW5lLWhlaWdodDoxLjc7fS5icmVha2Rvd257YmFj","a2dyb3VuZDp2YXIoLS1kYXJrMyk7Ym9yZGVyLXJhZGl1czp2YXIoLS1yYWRpdXMpO3BhZGRpbmc6MjBw","eDttYXJnaW4tYm90dG9tOjI0cHg7fS5icmVha2Rvd24tdGl0bGV7Zm9udC1zaXplOjExcHg7Zm9udC13","ZWlnaHQ6NjAwO2xldHRlci1zcGFjaW5nOjEuNXB4O2NvbG9yOnZhcigtLWdyYXkzKTt0ZXh0LXRyYW5z","Zm9ybTp1cHBlcmNhc2U7bWFyZ2luLWJvdHRvbToxNnB4O30uYnJlYWtkb3duLXJvd3tkaXNwbGF5OmZs","ZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxMnB4O21hcmdpbi1ib3R0b206MTJweDt9LmJyZWFrZG93","bi1yb3c6bGFzdC1jaGlsZHttYXJnaW4tYm90dG9tOjA7fS5icmVha2Rvd24tbGFiZWx7Zm9udC1zaXpl","OjEycHg7Y29sb3I6dmFyKC0tZ3JheTIpO3dpZHRoOjE1MHB4O2ZsZXgtc2hyaW5rOjA7fS5icmVha2Rv","d24tYmFyLXdyYXB7ZmxleDoxO2hlaWdodDo2cHg7YmFja2dyb3VuZDpyZ2JhKDI1NSwyNTUsMjU1LDAu","MDgpO2JvcmRlci1yYWRpdXM6OTlweDtvdmVyZmxvdzpoaWRkZW47fS5icmVha2Rvd24tYmFyLWZpbGx7","aGVpZ2h0OjEwMCU7Ym9yZGVyLXJhZGl1czo5OXB4O2JhY2tncm91bmQ6dmFyKC0tdGVhbCk7dHJhbnNp","dGlvbjp3aWR0aCAwLjhzIGN1YmljLWJlemllciguNCwwLC4yLDEpO30uYnJlYWtkb3duLXNjb3Jle2Zv","bnQtc2l6ZToxMnB4O2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjp2YXIoLS1nb2xkKTt3aWR0aDozMHB4O3Rl","eHQtYWxpZ246cmlnaHQ7ZmxleC1zaHJpbms6MDt9LmdhcC1jYWxsb3V0e2JvcmRlcjoxLjVweCBzb2xp","ZCByZ2JhKDIwMSwxNDYsNDIsMC40KTtib3JkZXItcmFkaXVzOnZhcigtLXJhZGl1cyk7cGFkZGluZzox","NnB4O21hcmdpbi1ib3R0b206MjRweDtiYWNrZ3JvdW5kOnJnYmEoMjAxLDE0Niw0MiwwLjA1KTt9Lmdh","cC1jYWxsb3V0LWxhYmVse2ZvbnQtc2l6ZToxMHB4O2ZvbnQtd2VpZ2h0OjYwMDtsZXR0ZXItc3BhY2lu","ZzoxLjVweDtjb2xvcjp2YXIoLS1nb2xkKTt0ZXh0LXRyYW5zZm9ybTp1cHBlcmNhc2U7bWFyZ2luLWJv","dHRvbTo2cHg7fS5nYXAtY2FsbG91dC10ZXh0e2ZvbnQtc2l6ZToxM3B4O2NvbG9yOnZhcigtLWdyYXky","KTtsaW5lLWhlaWdodDoxLjY7fS5nYXAtY2FsbG91dC10ZXh0IHN0cm9uZ3tjb2xvcjp2YXIoLS13aGl0","ZSk7fS5hYXNoYS1ub3Rle2JhY2tncm91bmQ6dmFyKC0tZGFyazMpO2JvcmRlci1yYWRpdXM6dmFyKC0t","cmFkaXVzKTtwYWRkaW5nOjIycHg7bWFyZ2luLWJvdHRvbToyNHB4O2JvcmRlci1sZWZ0OjNweCBzb2xp","ZCB2YXIoLS1nb2xkKTt9LmFhc2hhLW5vdGUtbGFiZWx7Zm9udC1zaXplOjEwcHg7Zm9udC13ZWlnaHQ6","NjAwO2xldHRlci1zcGFjaW5nOjEuNXB4O2NvbG9yOnZhcigtLWdvbGQpO3RleHQtdHJhbnNmb3JtOnVw","cGVyY2FzZTttYXJnaW4tYm90dG9tOjEwcHg7fS5hYXNoYS1ub3RlLXRleHR7Zm9udC1zaXplOjE0cHg7","Y29sb3I6dmFyKC0tZ3JheTIpO2xpbmUtaGVpZ2h0OjEuODtmb250LXN0eWxlOml0YWxpYzt9LmFhc2hh","LW5vdGUtc2lne21hcmdpbi10b3A6MTJweDtmb250LXNpemU6MTNweDtjb2xvcjp2YXIoLS1ncmF5Myk7","Zm9udC1zdHlsZTpub3JtYWw7fS5hYXNoYS1ub3RlLXNpZyBzdHJvbmd7Y29sb3I6dmFyKC0tZ29sZCk7","fS5jdGEtYmxvY2t7YmFja2dyb3VuZDp2YXIoLS1nb2xkKTtib3JkZXItcmFkaXVzOjE2cHg7cGFkZGlu","ZzoyOHB4IDI0cHg7dGV4dC1hbGlnbjpjZW50ZXI7bWFyZ2luLWJvdHRvbToxNnB4O30uY3RhLWJsb2Nr","IGgze2ZvbnQtZmFtaWx5OidQbGF5ZmFpciBEaXNwbGF5JyxzZXJpZjtmb250LXNpemU6MjJweDtjb2xv","cjp2YXIoLS1kYXJrKTttYXJnaW4tYm90dG9tOjhweDt9LmN0YS1ibG9jayBwe2ZvbnQtc2l6ZToxM3B4","O2NvbG9yOnJnYmEoMTMsMTMsMTMsMC42NSk7bWFyZ2luLWJvdHRvbToyMHB4O2xpbmUtaGVpZ2h0OjEu","Njt9LmJ0bi1ib29re2Rpc3BsYXk6aW5saW5lLWJsb2NrO2JhY2tncm91bmQ6dmFyKC0tZGFyayk7Y29s","b3I6dmFyKC0td2hpdGUpO2ZvbnQtZmFtaWx5OidETSBTYW5zJyxzYW5zLXNlcmlmO2ZvbnQtc2l6ZTox","NXB4O2ZvbnQtd2VpZ2h0OjYwMDtwYWRkaW5nOjE1cHggMzZweDtib3JkZXItcmFkaXVzOjk5cHg7dGV4","dC1kZWNvcmF0aW9uOm5vbmU7dHJhbnNpdGlvbjp0cmFuc2Zvcm0gMC4xNXMsYm94LXNoYWRvdyAwLjE1","cztsZXR0ZXItc3BhY2luZzowLjNweDt9LmJ0bi1ib29rOmhvdmVye3RyYW5zZm9ybTp0cmFuc2xhdGVZ","KC0ycHgpO2JveC1zaGFkb3c6MCA4cHggMjRweCByZ2JhKDAsMCwwLDAuMyk7fS5jdGEtaGFuZGxle21h","cmdpbi10b3A6MTRweDtmb250LXNpemU6MTJweDtjb2xvcjpyZ2JhKDEzLDEzLDEzLDAuNSk7fS5yZXRh","a2UtYnRue3dpZHRoOjEwMCU7YmFja2dyb3VuZDp0cmFuc3BhcmVudDtib3JkZXI6MS41cHggc29saWQg","cmdiYSgyNTUsMjU1LDI1NSwwLjEpO2NvbG9yOnZhcigtLWdyYXkzKTtmb250LWZhbWlseTonRE0gU2Fu","cycsc2Fucy1zZXJpZjtmb250LXNpemU6MTNweDtwYWRkaW5nOjEzcHg7Ym9yZGVyLXJhZGl1czo5OXB4","O2N1cnNvcjpwb2ludGVyO3RyYW5zaXRpb246Ym9yZGVyLWNvbG9yIDAuMnMsY29sb3IgMC4yczttYXJn","aW4tYm90dG9tOjMycHg7fS5yZXRha2UtYnRuOmhvdmVye2JvcmRlci1jb2xvcjpyZ2JhKDI1NSwyNTUs","MjU1LDAuMjUpO2NvbG9yOnZhcigtLWdyYXkyKTt9LmMtZ3JlZW57Y29sb3I6IzJFQ0M3MTt9LmMtdGVh","bHtjb2xvcjp2YXIoLS10ZWFsKTt9LmMtZ29sZHtjb2xvcjp2YXIoLS1nb2xkKTt9LmMtcmVke2NvbG9y","OiNFNzRDM0M7fS5iZy1ncmVlbntiYWNrZ3JvdW5kOnZhcigtLWdyZWVuKTtjb2xvcjp3aGl0ZTt9LmJn","LXRlYWx7YmFja2dyb3VuZDp2YXIoLS10ZWFsKTtjb2xvcjp3aGl0ZTt9LmJnLWdvbGR7YmFja2dyb3Vu","ZDp2YXIoLS1nb2xkKTtjb2xvcjp2YXIoLS1kYXJrKTt9LmJnLXJlZHtiYWNrZ3JvdW5kOnZhcigtLXJl","ZCk7Y29sb3I6d2hpdGU7fS5kaXZpZGVye2hlaWdodDoxcHg7YmFja2dyb3VuZDpyZ2JhKDI1NSwyNTUs","MjU1LDAuMDcpO21hcmdpbjoyNHB4IDA7fS5jb3B5cmlnaHR7dGV4dC1hbGlnbjpjZW50ZXI7Zm9udC1z","aXplOjExcHg7Y29sb3I6dmFyKC0tZ3JheTMpO3BhZGRpbmc6MjBweCAwIDhweDtsZXR0ZXItc3BhY2lu","ZzowLjNweDtib3JkZXItdG9wOjFweCBzb2xpZCByZ2JhKDI1NSwyNTUsMjU1LDAuMDYpO21hcmdpbi10","b3A6MjhweDt9LmNvcHlyaWdodCBhe2NvbG9yOnZhcigtLWdvbGQpO3RleHQtZGVjb3JhdGlvbjpub25l","O30="];
-var _s=document.createElement('style');
-_s.textContent=atob(_c.join(''));
-document.head.appendChild(_s);
-})();</script><script>(function(){
-var _0x=["Y29uc3Qgc2VjdGlvbnMgPSBbCnsKaXRlbXM6IFsKeyBtYWluOiAiTXkgQ1YgaXMgMiBwYWdlcyBvciBs","ZXNzIiwgbm90ZTogIlVBRSByZWNydWl0ZXJzIHJhcmVseSByZWFkIGJleW9uZCBwYWdlIDIuIEV2ZXJ5","IGxpbmUgbXVzdCBlYXJuIGl0cyBwbGFjZS4iIH0sCnsgbWFpbjogIkkgaGF2ZSBhIHRhaWxvcmVkIHBy","b2Zlc3Npb25hbCBzdW1tYXJ5IGF0IHRoZSB0b3AiLCBub3RlOiAiQSBnZW5lcmljIG9iamVjdGl2ZSB3","YXN0ZXMgcHJpbWUgcmVhbCBlc3RhdGUuIFlvdXIgc3VtbWFyeSBtdXN0IGFuc3dlcjogd2h5IGhpcmUg","bWUsIGhlcmUsIG5vdz8iIH0sCnsgbWFpbjogIk15IENWIHVzZXMgcmVsZXZhbnQga2V5d29yZHMgZnJv","bSBVQUUgSVQgam9iIGRlc2NyaXB0aW9ucyIsIG5vdGU6ICJNb3N0IFVBRSBlbXBsb3llcnMgdXNlIEFU","UyBmaWx0ZXJzLiBUaGUgcmlnaHQga2V5d29yZHMgZ2V0IHlvdSBwYXN0IHRoZSBzeXN0ZW0gYmVmb3Jl","IGEgaHVtYW4gc2VlcyB5b3VyIENWLiIgfSwKeyBtYWluOiAiQ2FyZWVyIGdhcHMgYXJlIGFkZHJlc3Nl","ZCB3aXRoIGEgYnJpZWYsIGNvbmZpZGVudCBleHBsYW5hdGlvbiIsIG5vdGU6ICJBIGdhcCBpcyBub3Qg","YSByZWQgZmxhZy4gTGVhdmluZyBpdCB1bmV4cGxhaW5lZCBpcy4gT25lIGNsZWFyIHNlbnRlbmNlIHJl","c29sdmVzIGl0LiIgfSwKeyBtYWluOiAiSSBoYXZlIGEgVUFFIHBob25lIG51bWJlciBhbmQgTGlua2Vk","SW4gVVJMIG9uIG15IENWIiwgbm90ZTogIkEgbG9jYWwgbnVtYmVyIHNpZ25hbHMgeW91IGFyZSBpbi1j","b3VudHJ5IGFuZCBpbW1lZGlhdGVseSByZWFjaGFibGUuIFJlY3J1aXRlcnMgbm90aWNlIGl0cyBhYnNl","bmNlLiIgfSwKXQp9LAp7Cml0ZW1zOiBbCnsgbWFpbjogIk15IGhlYWRsaW5lIHN0YXRlcyBteSB0YXJn","ZXQgcm9sZSBhbmQgVUFFIGF2YWlsYWJpbGl0eSIsIG5vdGU6ICJSZXdyaXRlIGl0OiAnU29mdHdhcmUg","RW5naW5lZXIgfCBPcGVuIHRvIFVBRSBPcHBvcnR1bml0aWVzJyBwZXJmb3JtcyBmYXIgYmV0dGVyIGlu","IHJlY3J1aXRlciBzZWFyY2hlcy4iIH0sCnsgbWFpbjogIkkgaGF2ZSBhIHByb2Zlc3Npb25hbCwgY2xl","YXIgcHJvZmlsZSBwaG90byIsIG5vdGU6ICJQcm9maWxlcyB3aXRoIHBob3RvcyByZWNlaXZlIHNpZ25p","ZmljYW50bHkgbW9yZSB2aWV3cy4gVGhpcyBpcyB0aGUgc2luZ2xlIGZhc3Rlc3Qgd2luIG9uIHRoaXMg","bGlzdC4iIH0sCnsgbWFpbjogIk15IEFib3V0IHNlY3Rpb24gZXhwbGFpbnMgbXkgYmFja2dyb3VuZCBh","bmQgd2h5IEkgYW0gaW4gRHViYWkiLCBub3RlOiAiUmVjcnVpdGVycyB3YW50IHRvIGtub3cgeW91J3Jl","IGNvbW1pdHRlZCB0byB0aGlzIG1hcmtldC4gVHdvIGhvbmVzdCBwYXJhZ3JhcGhzIGlzIGVub3VnaC4i","IH0sCnsgbWFpbjogIkkgYW0gY29ubmVjdGVkIHdpdGggYXQgbGVhc3QgMTAgVUFFLWJhc2VkIElUIHBy","b2Zlc3Npb25hbHMgb3IgcmVjcnVpdGVycyIsIG5vdGU6ICJUZW4gdGFyZ2V0ZWQgbG9jYWwgY29ubmVj","dGlvbnMgaW1wcm92ZSB5b3VyIHByb2ZpbGUncyBzZWFyY2ggdmlzaWJpbGl0eSBpbW1lZGlhdGVseS4i","IH0sCnsgbWFpbjogIkkgaGF2ZSBhdCBsZWFzdCAyIHJlY29tbWVuZGF0aW9ucyBmcm9tIHBhc3QgbWFu","YWdlcnMgb3IgY29sbGVhZ3VlcyIsIG5vdGU6ICJTb2NpYWwgcHJvb2YgdHJhdmVscyBhY3Jvc3MgYm9y","ZGVycy4gQSBzdHJvbmcgcmVjb21tZW5kYXRpb24gaXMgd29ydGggdGVuIHNlbGYtZGVzY3JpcHRpb25z","LiIgfSwKXQp9LAp7Cml0ZW1zOiBbCnsgbWFpbjogIkkgaG9sZCBhdCBsZWFzdCBvbmUgcmVsZXZhbnQg","dGVjaG5pY2FsIGNlcnRpZmljYXRpb24iLCBub3RlOiAiQ2xvdWQgKEFXUywgQXp1cmUsIEdDUCksIGN5","YmVyc2VjdXJpdHksIEVSUCBvciBwcm9qZWN0IG1hbmFnZW1lbnQgY2VydHMgYXJlIGhpZ2hseSB2YWx1","ZWQgYWNyb3NzIFVBRSBJVCByb2xlcy4iIH0sCnsgbWFpbjogIkkga25vdyB3aGljaCBza2lsbHMgYXJl","IGluIGhpZ2hlc3QgZGVtYW5kIGluIFVBRSByaWdodCBub3ciLCBub3RlOiAiQ2xvdWQsIGN5YmVyc2Vj","dXJpdHksIGRhdGEgZW5naW5lZXJpbmcgYW5kIGxvdy1jb2RlIHBsYXRmb3JtcyBkb21pbmF0ZSBVQUUg","SVQgaGlyaW5nLiBQb3NpdGlvbmluZyBtYXR0ZXJzLiIgfSwKeyBtYWluOiAiTXkgY2VydGlmaWNhdGlv","bnMgYW5kIGtleSBza2lsbHMgYXJlIGNsZWFybHkgbGlzdGVkIG9uIG15IENWIGFuZCBMaW5rZWRJbiIs","IG5vdGU6ICJDcmVkZW50aWFscyBub3QgdmlzaWJsZSB0byBhIHJlY3J1aXRlciBkbyBub3QgZXhpc3Qu","IExpc3QgZWFjaCBjZXJ0IHdpdGggdGhlIGlzc3VpbmcgYm9keSBhbmQgeWVhci4iIH0sCnsgbWFpbjog","IkkgaGF2ZSBpZGVudGlmaWVkIG15IG5leHQgc2tpbGwgb3IgY2VydGlmaWNhdGlvbiB0byBwdXJzdWUi","LCBub3RlOiAiSGF2aW5nIGEgY3VycmVudCBvciB1cGNvbWluZyBjZXJ0aWZpY2F0aW9uIHNpZ25hbHMg","YW1iaXRpb24gYW5kIGZvcndhcmQgbW9tZW50dW0gdG8gYW55IGhpcmluZyBtYW5hZ2VyLiIgfSwKeyBt","YWluOiAiSSBjYW4gZXhwbGFpbiBob3cgbXkgc2tpbGxzIHNvbHZlIGEgcmVhbCBidXNpbmVzcyBwcm9i","bGVtIiwgbm90ZTogIlVBRSBlbXBsb3llcnMgd2FudCBpbXBhY3Qg4oCUIGNvc3Qgc2F2ZWQsIHByb2Nl","c3MgaW1wcm92ZWQsIHN5c3RlbSBkZWxpdmVyZWQuIFF1YW50aWZ5IHlvdXIgdmFsdWUuIiB9LApdCn0s","CnsKaXRlbXM6IFsKeyBtYWluOiAiSSB1c2UgbXVsdGlwbGUgVUFFIGpvYiBwb3J0YWxzLCBub3QganVz","dCBMaW5rZWRJbiIsIG5vdGU6ICJCYXl0LCBOYXVrcmlndWxmLCBHdWxmVGFsZW50IGFuZCBjb21wYW55","IGNhcmVlciBwYWdlcyBhcmUgaGVhdmlseSB1c2VkLiBNYW55IHJvbGVzIG5ldmVyIGFwcGVhciBvbiBM","aW5rZWRJbi4iIH0sCnsgbWFpbjogIkkgaGF2ZSBhIHNob3J0bGlzdCBvZiAxMOKAkzE1IHRhcmdldCBj","b21wYW5pZXMgaW4gVUFFIiwgbm90ZTogIk1hc3MgYXBwbGljYXRpb25zIGhhdmUgdmVyeSBsb3cgcmV0","dXJuLiBUYXJnZXRlZCBvdXRyZWFjaCB0byBzcGVjaWZpYyBjb21wYW5pZXMgcHJvZHVjZXMgZmFyIGJl","dHRlciByZXN1bHRzLiIgfSwKeyBtYWluOiAiSSBoYXZlIGEgc2hvcnQsIHBlcnNvbmFsaXNlZCBvdXRy","ZWFjaCBtZXNzYWdlIGZvciBVQUUgcmVjcnVpdGVycyIsIG5vdGU6ICJBIHdlbGwtY3JhZnRlZCBmaXZl","LWxpbmUgbWVzc2FnZSB0byB0aGUgcmlnaHQgcmVjcnVpdGVyIG91dHBlcmZvcm1zIGZpZnR5IGNvbGQg","YXBwbGljYXRpb25zLiIgfSwKeyBtYWluOiAiSSBmb2xsb3cgdXAgb24gYXBwbGljYXRpb25zIGFmdGVy","IDXigJM3IGJ1c2luZXNzIGRheXMiLCBub3RlOiAiTW9zdCBjYW5kaWRhdGVzIGFwcGx5IGFuZCBkaXNh","cHBlYXIuIEEgc2luZ2xlIHBvbGl0ZSBmb2xsb3ctdXAgZHJhbWF0aWNhbGx5IGluY3JlYXNlcyB5b3Vy","IHJlc3BvbnNlIHJhdGUuIiB9LAp7IG1haW46ICJJIHRyYWNrIGV2ZXJ5IGFwcGxpY2F0aW9uIOKAlCBj","b21wYW55LCByb2xlLCBkYXRlLCBzdGF0dXMsIG5leHQgYWN0aW9uIiwgbm90ZTogIldpdGhvdXQgYSB0","cmFja2VyLCBtb21lbnR1bSBjb2xsYXBzZXMuIEEgc2ltcGxlIGxvZyBlbnN1cmVzIHlvdSBuZXZlciBt","aXNzIGEgZm9sbG93LXVwIHdpbmRvdy4iIH0sCl0KfSwKewppdGVtczogWwp7IG1haW46ICJJIGhhdmUg","dG9sZCBhdCBsZWFzdCA1IHBlb3BsZSBpbiBteSBuZXR3b3JrIHRoYXQgSSBhbSBhY3RpdmVseSBsb29r","aW5nIiwgbm90ZTogIkEgbGFyZ2Ugc2hhcmUgb2YgRHViYWkgSVQgcm9sZXMgYXJlIGZpbGxlZCB0aHJv","dWdoIHJlZmVycmFscyBiZWZvcmUgdGhleSBhcmUgZXZlciBhZHZlcnRpc2VkLiIgfSwKeyBtYWluOiAi","SSBhbSBub3Qgd2FpdGluZyBmb3IgZXZlcnl0aGluZyB0byBiZSBwZXJmZWN0IGJlZm9yZSBJIHN0YXJ0","IGFwcGx5aW5nIiwgbm90ZTogIlBlcmZlY3Rpb25pc20gc3RhbGxzIGpvYiBzZWFyY2hlcyBpbmRlZmlu","aXRlbHkuIEEgc29saWQgQ1Ygc2VudCB0b2RheSBiZWF0cyBhIGZsYXdsZXNzIG9uZSBzZW50IGluIHRo","cmVlIG1vbnRocy4iIH0sCnsgbWFpbjogIkkgaGF2ZSBhIGNvbmZpZGVudCBhbnN3ZXIgcmVhZHkgZm9y","ICdBcmUgeW91IG9uIGEgZGVwZW5kZW50IHZpc2E/JyIsIG5vdGU6ICInWWVzLCBhbmQgSSBhbSBmdWxs","eSBhdXRob3Jpc2VkIHRvIHdvcmsnIOKAlCBvbmUgY2xlYXIgc2VudGVuY2UgcmVtb3ZlcyB0aGUgY29u","Y2VybiBwcm9mZXNzaW9uYWxseS4iIH0sCnsgbWFpbjogIkkgZGVkaWNhdGUgYSBmaXhlZCBudW1iZXIg","b2YgaG91cnMgZWFjaCB3ZWVrIHRvIG15IGpvYiBzZWFyY2giLCBub3RlOiAiRXZlbiBmaXZlIGZvY3Vz","ZWQgaG91cnMgYSB3ZWVrLCBhcHBsaWVkIGNvbnNpc3RlbnRseSwgcHJvZHVjZXMgcmVhbCByZXN1bHRz","IHdpdGhpbiBhIG1vbnRoLiIgfSwKeyBtYWluOiAiSSBiZWxpZXZlIG15IGV4cGVyaWVuY2UgaGFzIHJl","YWwgdmFsdWUgaW4gdGhpcyBtYXJrZXQiLCBub3RlOiAiWW91ciB0ZWNobmljYWwgc2tpbGxzIGFuZCBp","bnRlcm5hdGlvbmFsIHBlcnNwZWN0aXZlIGFyZSBnZW51aW5lIGFzc2V0cyDigJQgbm90IGluIHNwaXRl","IG9mIHlvdXIgYmFja2dyb3VuZCwgYnV0IGJlY2F1c2Ugb2YgaXQuIiB9LApdCn0KXTsKY29uc3Qgc2Vj","dGlvbk5hbWVzID0gWyJZb3VyIENWIiwgIkxpbmtlZEluIiwgIlNraWxscyAmIENlcnRzIiwgIkpvYiBT","ZWFyY2giLCAiTWluZHNldCJdOwpsZXQgY2hlY2tlZCA9IEFycmF5LmZyb20oe2xlbmd0aDogNX0sICgp","ID0+IEFycmF5KDUpLmZpbGwoZmFsc2UpKTsKZnVuY3Rpb24gYnVpbGRMaXN0cygpIHsKc2VjdGlvbnMu","Zm9yRWFjaCgoc2VjLCBzaSkgPT4gewpjb25zdCBsaXN0ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQo","YGxpc3QtJHtzaX1gKTsKY29uc3QgZG90cyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGBkb3RzLSR7","c2l9YCk7Cgpmb3IgKGxldCBpID0gMDsgaSA8IDU7IGkrKykgewpjb25zdCBkID0gZG9jdW1lbnQuY3Jl","YXRlRWxlbWVudCgnZGl2Jyk7CmQuY2xhc3NOYW1lID0gJ3NzYi1kb3QnOwpkLmlkID0gYGRvdC0ke3Np","fS0ke2l9YDsKZG90cy5hcHBlbmRDaGlsZChkKTsKfQoKc2VjLml0ZW1zLmZvckVhY2goKGl0ZW0sIGlp","KSA9PiB7CmNvbnN0IGRpdiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2RpdicpOwpkaXYuY2xhc3NO","YW1lID0gJ2NoZWNrLWl0ZW0nOwpkaXYuaWQgPSBgaXRlbS0ke3NpfS0ke2lpfWA7CmRpdi5pbm5lckhU","TUwgPSBgCjxkaXYgY2xhc3M9ImNoZWNrYm94Ij48c3BhbiBjbGFzcz0iY2hlY2ttYXJrIj7inJM8L3Nw","YW4+PC9kaXY+CjxkaXYgY2xhc3M9ImNoZWNrLXRleHQiPgo8ZGl2IGNsYXNzPSJjaGVjay1tYWluIj4k","e2l0ZW0ubWFpbn08L2Rpdj4KPGRpdiBjbGFzcz0iY2hlY2stbm90ZSI+JHtpdGVtLm5vdGV9PC9kaXY+","CjwvZGl2PmA7CmRpdi5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHRvZ2dsZShzaSwgaWkp","KTsKbGlzdC5hcHBlbmRDaGlsZChkaXYpOwp9KTsKfSk7Cn0KZnVuY3Rpb24gdG9nZ2xlKHNpLCBpaSkg","ewpjaGVja2VkW3NpXVtpaV0gPSAhY2hlY2tlZFtzaV1baWldOwpjb25zdCBlbCA9IGRvY3VtZW50Lmdl","dEVsZW1lbnRCeUlkKGBpdGVtLSR7c2l9LSR7aWl9YCk7CmVsLmNsYXNzTGlzdC50b2dnbGUoJ2NoZWNr","ZWQnLCBjaGVja2VkW3NpXVtpaV0pOwp1cGRhdGVTZWN0aW9uU2NvcmUoc2kpOwp9CmZ1bmN0aW9uIHVw","ZGF0ZVNlY3Rpb25TY29yZShzaSkgewpjb25zdCBzY29yZSA9IGNoZWNrZWRbc2ldLmZpbHRlcihCb29s","ZWFuKS5sZW5ndGg7CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKGBzY29yZS1kaXNwbGF5LSR7c2l9YCku","dGV4dENvbnRlbnQgPSBgJHtzY29yZX0gLyA1YDsKZm9yIChsZXQgaSA9IDA7IGkgPCA1OyBpKyspIHsK","ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoYGRvdC0ke3NpfS0ke2l9YCkuY2xhc3NMaXN0LnRvZ2dsZSgn","ZmlsbGVkJywgaSA8IHNjb3JlKTsKfQp9CmZ1bmN0aW9uIGdldFRvdGFsKCkgewpyZXR1cm4gY2hlY2tl","ZC5mbGF0KCkuZmlsdGVyKEJvb2xlYW4pLmxlbmd0aDsKfQpmdW5jdGlvbiBnZXRTZWN0aW9uU2NvcmUo","c2kpIHsKcmV0dXJuIGNoZWNrZWRbc2ldLmZpbHRlcihCb29sZWFuKS5sZW5ndGg7Cn0KZnVuY3Rpb24g","c2hvd1NjcmVlbihpZCkgewpkb2N1bWVudC5xdWVyeVNlbGVjdG9yQWxsKCcuc2NyZWVuJykuZm9yRWFj","aChzID0+IHMuY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJykpOwpjb25zdCBlbCA9IGRvY3VtZW50Lmdl","dEVsZW1lbnRCeUlkKGlkKTsKZWwuY2xhc3NMaXN0LmFkZCgnYWN0aXZlJyk7CndpbmRvdy5zY3JvbGxU","bygwLCAwKTsKdXBkYXRlUHJvZ3Jlc3MoaWQpOwp9CmZ1bmN0aW9uIHVwZGF0ZVByb2dyZXNzKHNjcmVl","bklkKSB7CmNvbnN0IG1hcCA9IHsKJ3NjcmVlbi1jb3Zlcic6IDAsCidzY3JlZW4tMCc6IDE1LAonc2Ny","ZWVuLTEnOiAzMCwKJ3NjcmVlbi0yJzogNTAsCidzY3JlZW4tMyc6IDcwLAonc2NyZWVuLTQnOiA4OCwK","J3NjcmVlbi1yZXN1bHRzJzogMTAwCn07CmRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwcm9ncmVzc0Zp","bGwnKS5zdHlsZS53aWR0aCA9IChtYXBbc2NyZWVuSWRdIHx8IDApICsgJyUnOwp9CmZ1bmN0aW9uIHN0","YXJ0UXVpeigpIHsgc2hvd1NjcmVlbignc2NyZWVuLTAnKTsgfQpmdW5jdGlvbiBuZXh0U2VjdGlvbihp","KXsgc2hvd1NjcmVlbihpIDwgNCA/IGBzY3JlZW4tJHtpKzF9YCA6ICdzY3JlZW4tcmVzdWx0cycpOyB9","CmZ1bmN0aW9uIHByZXZTZWN0aW9uKGkpeyBzaG93U2NyZWVuKGkgPiAwID8gYHNjcmVlbi0ke2ktMX1g","IDogJ3NjcmVlbi1jb3ZlcicpOyB9CmZ1bmN0aW9uIHNob3dSZXN1bHRzKCkgewpjb25zdCB0b3RhbCA9","IGdldFRvdGFsKCk7CgpsZXQgYmFuZDsKaWYgKHRvdGFsID49IDIwKSBiYW5kID0geyBsYWJlbDogIlJl","YWR5IHRvIExhdW5jaCIsIGNsczogImJnLWdyZWVuIiwgZGVzYzogIllvdSBhcmUgbWFya2V0LXJlYWR5","LiBUaGUgcmVtYWluaW5nIGdhcHMgYXJlIHJlZmluZW1lbnRzLCBub3QgYmxvY2tlcnMuIEJvb2sgYSBz","ZXNzaW9uIHdpdGggQWFzaGEgdG8gc2hhcnBlbiB5b3VyIHBpdGNoIGFuZCBpbnRlcnZpZXcgdGVjaG5p","cXVlIOKAlCBhbmQgbW92ZSBmYXN0ZXIuIiwgbm90ZTogIllvdSBoYXZlIGRvbmUgdGhlIGhhcmQgd29y","ay4gWW91ciBmb3VuZGF0aW9uIGlzIHN0cm9uZy4gV2hhdCBJIGNhbiBkbyBmb3IgeW91IG5vdyBpcyBo","ZWxwIHlvdSBjb21wcmVzcyB0aGUgdGltZSBiZXR3ZWVuIHdoZXJlIHlvdSBhcmUgYW5kIHdoZXJlIHlv","dSB3YW50IHRvIGJlLiBPbmUgZm9jdXNlZCBzZXNzaW9uIGNhbiBzYXZlIHlvdSB3ZWVrcyBvZiB0cmlh","bCBhbmQgZXJyb3IuIiB9OwplbHNlIGlmICh0b3RhbCA+PSAxMykgYmFuZCA9IHsgbGFiZWw6ICJTdHJv","bmcgRm91bmRhdGlvbiIsIGNsczogImJnLXRlYWwiLCBkZXNjOiAiU29saWQgYmFzZSB3aXRoIGNsZWFy","LCBpZGVudGlmaWFibGUgZ2Fwcy4gRm9jdXMgb24geW91ciBsb3dlc3Qtc2NvcmluZyBzZWN0aW9uIGZp","cnN0LiBGb3VyIHRvIHNpeCB3ZWVrcyBvZiB0YXJnZXRlZCBlZmZvcnQgd2lsbCBtb3ZlIHlvdSBmdWxs","eSBpbnRvIHJlYWR5IHRlcnJpdG9yeS4iLCBub3RlOiAiWW91IGFyZSBjbG9zZXIgdGhhbiB5b3UgdGhp","bmsuIEkgd2FzIGluIGV4YWN0bHkgdGhpcyBwb3NpdGlvbiDigJQgbW9zdCB0aGluZ3MgaW4gcGxhY2Ug","YnV0IGEgZmV3IGdhcHMgaG9sZGluZyBtZSBiYWNrLiBJZGVudGlmeWluZyB3aGF0IHRvIGZpeCBmaXJz","dCBtYWRlIGV2ZXJ5dGhpbmcgY2xpY2sgaW50byBwbGFjZSBxdWlja2x5LiIgfTsKZWxzZSBpZiAodG90","YWwgPj0gNykgYmFuZCA9IHsgbGFiZWw6ICJCdWlsZGluZyBNb21lbnR1bSIsIGNsczogImJnLWdvbGQi","LCBkZXNjOiAiWW91IGhhdmUgc3RhcnRlZCwgYW5kIGtub3dpbmcgeW91ciBnYXBzIGNsZWFybHkgaXMg","cmVhbCBwcm9ncmVzcy4gQSBmb2N1c2VkIDMwLWRheSBwbGFuIHdpbGwgY3JlYXRlIG1lYW5pbmdmdWwg","bW92ZW1lbnQuIERvIG5vdCB1bmRlcmVzdGltYXRlIGhvdyBxdWlja2x5IHRoaW5ncyBjYW4gc2hpZnQu","Iiwgbm90ZTogIldoZW4gSSBmaXJzdCBtYXBwZWQgbXkgb3duIHJlYWRpbmVzcywgSSB3YXMgaW4gdGhp","cyByYW5nZS4gVGhlIG1vc3QgaW1wb3J0YW50IHRoaW5nIEkgZGlkIHdhcyBzdG9wIGRvaW5nIGV2ZXJ5","dGhpbmcgYXQgb25jZSBhbmQgZm9jdXMgb24gb25lIGdhcCBhdCBhIHRpbWUuIFRoYXQgc2hpZnQgY2hh","bmdlZCBldmVyeXRoaW5nLiIgfTsKZWxzZSBiYW5kID0geyBsYWJlbDogIlN0YXJ0IEhlcmUiLCBjbHM6","ICJiZy1yZWQiLCBkZXNjOiAiVGhpcyBhdWRpdCBoYXMganVzdCBzYXZlZCB5b3UgbW9udGhzIG9mIG1p","c2RpcmVjdGVkIGVmZm9ydC4gWW91IG5vdyBoYXZlIGEgcHJlY2lzZSBtYXAgb2Ygd2hhdCB0byBidWls","ZC4gRXZlcnkgZXhwZXJ0IHN0YXJ0ZWQgYXQgemVyby4gVGhlIG9ubHkgbWlzdGFrZSBpcyBub3Qgc3Rh","cnRpbmcuIiwgbm90ZTogIkkgbW92ZWQgdG8gRHViYWkgd2l0aCB6ZXJvIGxvY2FsIGNvbnRhY3RzIGFu","ZCB2ZXJ5IGxpdHRsZSBpZGVhIG9mIGhvdyB0aGlzIG1hcmtldCB3b3JrZWQuIEkgZ290IGhpcmVkIGlu","IDMwIGRheXMuIE5vdCBiZWNhdXNlIEkgaGFkIGV2ZXJ5dGhpbmcgZmlndXJlZCBvdXQg4oCUIGJ1dCBi","ZWNhdXNlIEkgd2FzIGhvbmVzdCBhYm91dCBteSBnYXBzIGFuZCBmaXhlZCB0aGVtIG9uZSBieSBvbmUu","IFRoYXQgaXMgZXhhY3RseSB3aGF0IHRoaXMgaXMgZm9yLiIgfTsKCmNvbnN0IHNjb3JlcyA9IHNlY3Rp","b25OYW1lcy5tYXAoKG4sIGkpID0+ICh7IG5hbWU6IG4sIHNjb3JlOiBnZXRTZWN0aW9uU2NvcmUoaSkg","fSkpOwpjb25zdCBsb3dlc3QgPSBzY29yZXMucmVkdWNlKChhLCBiKSA9PiBhLnNjb3JlIDw9IGIuc2Nv","cmUgPyBhIDogYik7Cgpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncmVzdWx0LWJhZGdlJykudGV4dENv","bnRlbnQgPSBgWW91ciByZXN1bHRgOwpkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgncmVzdWx0LWJhZGdl","JykuY2xhc3NOYW1lID0gYHJlc3VsdC1iYWRnZSAke2JhbmQuY2xzfWA7CmRvY3VtZW50LmdldEVsZW1l","bnRCeUlkKCdyZXN1bHQtc2NvcmUtYmlnJykudGV4dENvbnRlbnQgPSB0b3RhbDsKZG9jdW1lbnQuZ2V0","RWxlbWVudEJ5SWQoJ3Jlc3VsdC1sYWJlbCcpLnRleHRDb250ZW50ID0gYmFuZC5sYWJlbDsKZG9jdW1l","bnQuZ2V0RWxlbWVudEJ5SWQoJ3Jlc3VsdC1kZXNjJykudGV4dENvbnRlbnQgPSBiYW5kLmRlc2M7CmRv","Y3VtZW50LmdldEVsZW1lbnRCeUlkKCdhYXNoYS1wZXJzb25hbGlzZWQtbm90ZScpLnRleHRDb250ZW50","ID0gYCIke2JhbmQubm90ZX0iYDsKCmNvbnN0IGJSb3dzID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQo","J2JyZWFrZG93bi1yb3dzJyk7CmJSb3dzLmlubmVySFRNTCA9ICcnOwpzY29yZXMuZm9yRWFjaChzID0+","IHsKY29uc3QgcGN0ID0gKHMuc2NvcmUgLyA1KSAqIDEwMDsKYlJvd3MuaW5uZXJIVE1MICs9IGAKPGRp","diBjbGFzcz0iYnJlYWtkb3duLXJvdyI+CjxkaXYgY2xhc3M9ImJyZWFrZG93bi1sYWJlbCI+JHtzLm5h","bWV9PC9kaXY+CjxkaXYgY2xhc3M9ImJyZWFrZG93bi1iYXItd3JhcCI+CjxkaXYgY2xhc3M9ImJyZWFr","ZG93bi1iYXItZmlsbCIgc3R5bGU9IndpZHRoOiR7cGN0fSUiPjwvZGl2Pgo8L2Rpdj4KPGRpdiBjbGFz","cz0iYnJlYWtkb3duLXNjb3JlIj4ke3Muc2NvcmV9LzU8L2Rpdj4KPC9kaXY+YDsKfSk7Cgpkb2N1bWVu","dC5nZXRFbGVtZW50QnlJZCgnZ2FwLWNhbGxvdXQnKS5pbm5lckhUTUwgPSBgCjxkaXYgY2xhc3M9Imdh","cC1jYWxsb3V0LWxhYmVsIj5Zb3VyIEJpZ2dlc3QgT3Bwb3J0dW5pdHk8L2Rpdj4KPGRpdiBjbGFzcz0i","Z2FwLWNhbGxvdXQtdGV4dCI+CllvdXIgbG93ZXN0IHNjb3JlIGlzIDxzdHJvbmc+JHtsb3dlc3QubmFt","ZX0gKCR7bG93ZXN0LnNjb3JlfS81KTwvc3Ryb25nPi4KVGhpcyBpcyB5b3VyIGJvdHRsZW5lY2sg4oCU","IG9uZSB3ZWFrIGFyZWEgaG9sZHMgYmFjayBldmVyeXRoaW5nIGVsc2UuClN0YXJ0IGhlcmUgYmVmb3Jl","IHNwcmVhZGluZyBlZmZvcnQgYWNyb3NzIG90aGVyIHNlY3Rpb25zLgo8L2Rpdj5gOwpzaG93U2NyZWVu","KCdzY3JlZW4tcmVzdWx0cycpOwp9CmZ1bmN0aW9uIHJldGFrZVF1aXooKSB7CmNoZWNrZWQgPSBBcnJh","eS5mcm9tKHtsZW5ndGg6IDV9LCAoKSA9PiBBcnJheSg1KS5maWxsKGZhbHNlKSk7CmRvY3VtZW50LnF1","ZXJ5U2VsZWN0b3JBbGwoJy5jaGVjay1pdGVtJykuZm9yRWFjaChlbCA9PiBlbC5jbGFzc0xpc3QucmVt","b3ZlKCdjaGVja2VkJykpOwpmb3IgKGxldCBzaSA9IDA7IHNpIDwgNTsgc2krKykgdXBkYXRlU2VjdGlv","blNjb3JlKHNpKTsKc2hvd1NjcmVlbignc2NyZWVuLWNvdmVyJyk7Cn0KYnVpbGRMaXN0cygpOw=="];
-var _1x=_0x.join('');
-var _2x=atob(_1x);
-eval(_2x);
-})();</script></body></html>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9922A;
+    --gold-light: #F5E6C8;
+    --gold-dark: #9A6E1E;
+    --dark: #0D0D0D;
+    --dark2: #111111;
+    --dark3: #1A1A1A;
+    --teal: #0F7C7C;
+    --teal-light: #E6F5F5;
+    --white: #FFFFFF;
+    --gray1: #F7F7F5;
+    --gray2: #CCCCCC;
+    --gray3: #888888;
+    --gray4: #444444;
+    --green: #1A7A4A;
+    --amber: #D4860A;
+    --red: #B83232;
+    --radius: 12px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--dark);
+    color: var(--white);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  /* ── PROGRESS BAR ── */
+  .progress-wrap {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.08);
+    z-index: 100;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--gold);
+    transition: width 0.5s cubic-bezier(.4,0,.2,1);
+    width: 0%;
+  }
+
+  /* ── SCREENS ── */
+  .screen {
+    display: none;
+    min-height: 100vh;
+    padding: 60px 24px 40px;
+    max-width: 640px;
+    margin: 0 auto;
+    animation: fadeUp 0.4s ease both;
+  }
+  .screen.active { display: flex; flex-direction: column; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── COVER SCREEN ── */
+  #screen-cover {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 6px 18px;
+    border-radius: 99px;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(44px, 10vw, 72px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+  .cover-title .line-gold { color: var(--gold); }
+
+  .cover-sub {
+    font-size: 15px;
+    color: var(--gray2);
+    max-width: 380px;
+    margin: 0 auto 36px;
+  }
+  .cover-sub strong { color: var(--white); }
+
+  .cover-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  .stat { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--gold);
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--gray3);
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 16px 40px;
+    border-radius: 99px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    text-decoration: none;
+  }
+  .btn-primary:hover {
+    background: #DFA535;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(201,146,42,0.35);
+  }
+  .btn-primary:active { transform: translateY(0); }
+
+  .cover-by {
+    margin-top: 36px;
+    font-size: 12px;
+    color: var(--gray3);
+    letter-spacing: 0.5px;
+  }
+  .cover-by span { color: var(--gold); font-weight: 600; }
+
+  /* ── SECTION SCREEN ── */
+  .section-screen {
+    padding-top: 60px;
+  }
+
+  .section-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .section-num {
+    width: 32px; height: 32px;
+    background: var(--gold);
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .section-of {
+    font-size: 12px;
+    color: var(--gray3);
+    letter-spacing: 0.5px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 6vw, 36px);
+    line-height: 1.15;
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    font-size: 13px;
+    color: var(--gray3);
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+
+  /* ── CHECKLIST ITEMS ── */
+  .check-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+
+  .check-item {
+    background: var(--dark3);
+    border: 1.5px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 14px 16px;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .check-item:hover {
+    border-color: rgba(201,146,42,0.4);
+    background: #1C1C1C;
+  }
+  .check-item.checked {
+    border-color: var(--teal);
+    background: rgba(15,124,124,0.08);
+  }
+
+  .checkbox {
+    width: 20px; height: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+    border-radius: 5px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s;
+    background: transparent;
+  }
+  .check-item.checked .checkbox {
+    background: var(--teal);
+    border-color: var(--teal);
+  }
+  .checkmark {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.2s;
+    color: white;
+    font-size: 12px;
+  }
+  .check-item.checked .checkmark {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .check-text { flex: 1; }
+  .check-main {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1.4;
+    margin-bottom: 4px;
+  }
+  .check-note {
+    font-size: 12px;
+    color: var(--gray3);
+    line-height: 1.5;
+  }
+
+  /* ── SECTION SCORE MINI ── */
+  .section-score-bar {
+    background: var(--dark3);
+    border-radius: 10px;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  .ssb-label { font-size: 12px; color: var(--gray3); }
+  .ssb-score {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--gold);
+  }
+  .ssb-dots { display: flex; gap: 5px; }
+  .ssb-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.3s;
+  }
+  .ssb-dot.filled { background: var(--teal); }
+
+  /* ── NAV ── */
+  .nav-row {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 12px;
+  }
+  .btn-back {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.12);
+    color: var(--gray2);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 14px 24px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-back:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
+
+  .btn-next {
+    flex: 1;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 24px;
+    border-radius: 99px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s, background 0.15s;
+    letter-spacing: 0.2px;
+  }
+  .btn-next:hover {
+    background: #DFA535;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(201,146,42,0.3);
+  }
+  .btn-next:disabled {
+    background: rgba(201,146,42,0.25);
+    color: rgba(13,13,13,0.4);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ── RESULTS SCREEN ── */
+  #screen-results {
+    padding-top: 60px;
+  }
+
+  .result-header { text-align: center; margin-bottom: 32px; }
+  .result-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 6px 16px;
+    border-radius: 99px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  .result-score-big {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    line-height: 1;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .result-score-denom {
+    font-size: 13px;
+    color: var(--gray3);
+    margin-bottom: 14px;
+  }
+  .result-label {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  .result-desc {
+    font-size: 14px;
+    color: var(--gray2);
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Score breakdown */
+  .breakdown {
+    background: var(--dark3);
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  .breakdown-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--gray3);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .breakdown-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .breakdown-row:last-child { margin-bottom: 0; }
+  .breakdown-label {
+    font-size: 12px;
+    color: var(--gray2);
+    width: 150px;
+    flex-shrink: 0;
+  }
+  .breakdown-bar-wrap {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .breakdown-bar-fill {
+    height: 100%;
+    border-radius: 99px;
+    background: var(--teal);
+    transition: width 0.8s cubic-bezier(.4,0,.2,1);
+  }
+  .breakdown-score {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+    width: 30px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* Lowest section callout */
+  .gap-callout {
+    border: 1.5px solid rgba(201,146,42,0.4);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 24px;
+    background: rgba(201,146,42,0.05);
+  }
+  .gap-callout-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .gap-callout-text {
+    font-size: 13px;
+    color: var(--gray2);
+    line-height: 1.6;
+  }
+  .gap-callout-text strong { color: var(--white); }
+
+  /* ── NOTE FROM AASHA ── */
+  .aasha-note {
+    background: var(--dark3);
+    border-radius: var(--radius);
+    padding: 22px;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--gold);
+  }
+  .aasha-note-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .aasha-note-text {
+    font-size: 14px;
+    color: var(--gray2);
+    line-height: 1.8;
+    font-style: italic;
+  }
+  .aasha-note-sig {
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--gray3);
+    font-style: normal;
+  }
+  .aasha-note-sig strong { color: var(--gold); }
+
+  /* ── CTA BLOCK ── */
+  .cta-block {
+    background: var(--gold);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .cta-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--dark);
+    margin-bottom: 8px;
+  }
+  .cta-block p {
+    font-size: 13px;
+    color: rgba(13,13,13,0.65);
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  .btn-book {
+    display: inline-block;
+    background: var(--dark);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px 36px;
+    border-radius: 99px;
+    text-decoration: none;
+    transition: transform 0.15s, box-shadow 0.15s;
+    letter-spacing: 0.3px;
+  }
+  .btn-book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .cta-handle {
+    margin-top: 14px;
+    font-size: 12px;
+    color: rgba(13,13,13,0.5);
+  }
+
+  .retake-btn {
+    width: 100%;
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.1);
+    color: var(--gray3);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    padding: 13px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    margin-bottom: 32px;
+  }
+  .retake-btn:hover {
+    border-color: rgba(255,255,255,0.25);
+    color: var(--gray2);
+  }
+
+  /* Color helpers */
+  .c-green  { color: #2ECC71; }
+  .c-teal   { color: var(--teal); }
+  .c-gold   { color: var(--gold); }
+  .c-red    { color: #E74C3C; }
+  .bg-green { background: var(--green); color: white; }
+  .bg-teal  { background: var(--teal);  color: white; }
+  .bg-gold  { background: var(--gold);  color: var(--dark); }
+  .bg-red   { background: var(--red);   color: white; }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: rgba(255,255,255,0.07);
+    margin: 24px 0;
+  }
+
+  /* Copyright footer */
+  .copyright {
+    text-align: center;
+    font-size: 11px;
+    color: var(--gray3);
+    padding: 20px 0 8px;
+    letter-spacing: 0.3px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    margin-top: 28px;
+  }
+  .copyright a {
+    color: var(--gold);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-wrap"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<div class="screen active" id="screen-cover">
+  <div class="cover-badge">Free Self-Audit</div>
+  <h1 class="cover-title">
+    Am I<br>
+    <span class="line-gold">Job-Ready</span><br>
+    in Dubai?
+  </h1>
+  <p class="cover-sub">
+    The honest self-audit for <strong>Indian expats</strong> restarting their IT career in UAE.
+    25 questions. 5 minutes. A clear answer.
+  </p>
+
+  <div class="cover-stats">
+    <div class="stat">
+      <div class="stat-num">5</div>
+      <div class="stat-label">Sections</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">25</div>
+      <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">~5</div>
+      <div class="stat-label">Minutes</div>
+    </div>
+  </div>
+
+  <button class="btn-primary" onclick="startQuiz()">Start the Audit →</button>
+
+  <p class="cover-by">by <span>Aasha</span> · Senior IT Professional · Dubai</p>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<!-- ═══════════════ SECTION SCREENS ═══════════════ -->
+<div class="screen section-screen" id="screen-0">
+  <div class="section-tag">
+    <div class="section-num">1</div>
+    <div class="section-of">Section 1 of 5</div>
+  </div>
+  <h2 class="section-title">Your CV</h2>
+  <p class="section-sub">Is your CV speaking the UAE market's language?</p>
+
+  <div class="check-list" id="list-0"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-0">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-0"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-next" id="next-0" onclick="nextSection(0)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-1">
+  <div class="section-tag">
+    <div class="section-num">2</div>
+    <div class="section-of">Section 2 of 5</div>
+  </div>
+  <h2 class="section-title">Your LinkedIn</h2>
+  <p class="section-sub">UAE recruiters search LinkedIn daily. Are they finding you?</p>
+
+  <div class="check-list" id="list-1"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-1">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-1"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(1)">← Back</button>
+    <button class="btn-next" id="next-1" onclick="nextSection(1)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-2">
+  <div class="section-tag">
+    <div class="section-num">3</div>
+    <div class="section-of">Section 3 of 5</div>
+  </div>
+  <h2 class="section-title">Skills & Certifications</h2>
+  <p class="section-sub">In UAE tech hiring, certifications signal credibility fast.</p>
+
+  <div class="check-list" id="list-2"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-2">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-2"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(2)">← Back</button>
+    <button class="btn-next" id="next-2" onclick="nextSection(2)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-3">
+  <div class="section-tag">
+    <div class="section-num">4</div>
+    <div class="section-of">Section 4 of 5</div>
+  </div>
+  <h2 class="section-title">Job Search Strategy</h2>
+  <p class="section-sub">Are you searching smart — or applying and hoping?</p>
+
+  <div class="check-list" id="list-3"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-3">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-3"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(3)">← Back</button>
+    <button class="btn-next" id="next-3" onclick="nextSection(3)">Next Section →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<div class="screen section-screen" id="screen-4">
+  <div class="section-tag">
+    <div class="section-num">5</div>
+    <div class="section-of">Section 5 of 5</div>
+  </div>
+  <h2 class="section-title">Mindset & Readiness</h2>
+  <p class="section-sub">The invisible factor that separates expats who get hired from those who don't.</p>
+
+  <div class="check-list" id="list-4"></div>
+  <div class="section-score-bar">
+    <div>
+      <div class="ssb-label">Section score</div>
+      <div class="ssb-score" id="score-display-4">0 / 5</div>
+    </div>
+    <div class="ssb-dots" id="dots-4"></div>
+  </div>
+
+  <div class="nav-row">
+    <button class="btn-back" onclick="prevSection(4)">← Back</button>
+    <button class="btn-next" id="next-4" onclick="showResults()">See My Results →</button>
+  </div>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+</div>
+
+<!-- ═══════════════ RESULTS ═══════════════ -->
+<div class="screen" id="screen-results">
+
+  <div class="result-header">
+    <div class="result-badge" id="result-badge"></div>
+    <div class="result-score-big" id="result-score-big"></div>
+    <div class="result-score-denom">out of 25</div>
+    <div class="result-label" id="result-label"></div>
+    <p class="result-desc" id="result-desc"></p>
+  </div>
+
+  <div class="breakdown">
+    <div class="breakdown-title">Score Breakdown</div>
+    <div id="breakdown-rows"></div>
+  </div>
+
+  <div class="gap-callout" id="gap-callout"></div>
+
+  <div class="divider"></div>
+
+  <!-- NOTE FROM AASHA -->
+  <div class="aasha-note">
+    <div class="aasha-note-label">A note from Aasha</div>
+    <p class="aasha-note-text" id="aasha-personalised-note"></p>
+    <div class="aasha-note-sig">— <strong>Aasha</strong> · Senior IT Professional · Dubai · <em>Hired in 30 days with zero local network</em></div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-block">
+    <h3>Ready to fast-track your job search?</h3>
+    <p>Book a 1-on-1 Career Audit with Aasha. Bring your scores. Leave with a clear, personalised 30-day action plan.</p>
+    <a href="https://topmate.io/aasha_in_dubai" target="_blank" class="btn-book">Book Your Session with Aasha →</a>
+    <div class="cta-handle">@aasha.in.dubai &nbsp;·&nbsp; Link also in bio</div>
+  </div>
+
+  <button class="retake-btn" onclick="retakeQuiz()">↺ Retake the audit</button>
+  <div class="copyright">© 2025 Aasha in Dubai · <a href="https://topmate.io/aasha_in_dubai" target="_blank">topmate.io/aasha_in_dubai</a> · For personal use only</div>
+
+</div>
+
+<script>
+// ── DATA ──────────────────────────────────────────────────
+const sections = [
+  {
+    items: [
+      { main: "My CV is 2 pages or less", note: "UAE recruiters rarely read beyond page 2. Every line must earn its place." },
+      { main: "I have a tailored professional summary at the top", note: "A generic objective wastes prime real estate. Your summary must answer: why hire me, here, now?" },
+      { main: "My CV uses relevant keywords from UAE IT job descriptions", note: "Most UAE employers use ATS filters. The right keywords get you past the system before a human sees your CV." },
+      { main: "Career gaps are addressed with a brief, confident explanation", note: "A gap is not a red flag. Leaving it unexplained is. One clear sentence resolves it." },
+      { main: "I have a UAE phone number and LinkedIn URL on my CV", note: "A local number signals you are in-country and immediately reachable. Recruiters notice its absence." },
+    ]
+  },
+  {
+    items: [
+      { main: "My headline states my target role and UAE availability", note: "Rewrite it: 'Software Engineer | Open to UAE Opportunities' performs far better in recruiter searches." },
+      { main: "I have a professional, clear profile photo", note: "Profiles with photos receive significantly more views. This is the single fastest win on this list." },
+      { main: "My About section explains my background and why I am in Dubai", note: "Recruiters want to know you're committed to this market. Two honest paragraphs is enough." },
+      { main: "I am connected with at least 10 UAE-based IT professionals or recruiters", note: "Ten targeted local connections improve your profile's search visibility immediately." },
+      { main: "I have at least 2 recommendations from past managers or colleagues", note: "Social proof travels across borders. A strong recommendation is worth ten self-descriptions." },
+    ]
+  },
+  {
+    items: [
+      { main: "I hold at least one relevant technical certification", note: "Cloud (AWS, Azure, GCP), cybersecurity, ERP or project management certs are highly valued across UAE IT roles." },
+      { main: "I know which skills are in highest demand in UAE right now", note: "Cloud, cybersecurity, data engineering and low-code platforms dominate UAE IT hiring. Positioning matters." },
+      { main: "My certifications and key skills are clearly listed on my CV and LinkedIn", note: "Credentials not visible to a recruiter do not exist. List each cert with the issuing body and year." },
+      { main: "I have identified my next skill or certification to pursue", note: "Having a current or upcoming certification signals ambition and forward momentum to any hiring manager." },
+      { main: "I can explain how my skills solve a real business problem", note: "UAE employers want impact — cost saved, process improved, system delivered. Quantify your value." },
+    ]
+  },
+  {
+    items: [
+      { main: "I use multiple UAE job portals, not just LinkedIn", note: "Bayt, Naukrigulf, GulfTalent and company career pages are heavily used. Many roles never appear on LinkedIn." },
+      { main: "I have a shortlist of 10–15 target companies in UAE", note: "Mass applications have very low return. Targeted outreach to specific companies produces far better results." },
+      { main: "I have a short, personalised outreach message for UAE recruiters", note: "A well-crafted five-line message to the right recruiter outperforms fifty cold applications." },
+      { main: "I follow up on applications after 5–7 business days", note: "Most candidates apply and disappear. A single polite follow-up dramatically increases your response rate." },
+      { main: "I track every application — company, role, date, status, next action", note: "Without a tracker, momentum collapses. A simple log ensures you never miss a follow-up window." },
+    ]
+  },
+  {
+    items: [
+      { main: "I have told at least 5 people in my network that I am actively looking", note: "A large share of Dubai IT roles are filled through referrals before they are ever advertised." },
+      { main: "I am not waiting for everything to be perfect before I start applying", note: "Perfectionism stalls job searches indefinitely. A solid CV sent today beats a flawless one sent in three months." },
+      { main: "I have a confident answer ready for 'Are you on a dependent visa?'", note: "'Yes, and I am fully authorised to work' — one clear sentence removes the concern professionally." },
+      { main: "I dedicate a fixed number of hours each week to my job search", note: "Even five focused hours a week, applied consistently, produces real results within a month." },
+      { main: "I believe my experience has real value in this market", note: "Your technical skills and international perspective are genuine assets — not in spite of your background, but because of it." },
+    ]
+  }
+];
+
+const sectionNames = ["Your CV", "LinkedIn", "Skills & Certs", "Job Search", "Mindset"];
+
+// ── STATE ──────────────────────────────────────────────────
+let checked = Array.from({length: 5}, () => Array(5).fill(false));
+
+// ── INIT ──────────────────────────────────────────────────
+function buildLists() {
+  sections.forEach((sec, si) => {
+    const list = document.getElementById(`list-${si}`);
+    const dots = document.getElementById(`dots-${si}`);
+    // Build dots
+    for (let i = 0; i < 5; i++) {
+      const d = document.createElement('div');
+      d.className = 'ssb-dot';
+      d.id = `dot-${si}-${i}`;
+      dots.appendChild(d);
+    }
+    // Build items
+    sec.items.forEach((item, ii) => {
+      const div = document.createElement('div');
+      div.className = 'check-item';
+      div.id = `item-${si}-${ii}`;
+      div.innerHTML = `
+        <div class="checkbox"><span class="checkmark">✓</span></div>
+        <div class="check-text">
+          <div class="check-main">${item.main}</div>
+          <div class="check-note">${item.note}</div>
+        </div>`;
+      div.addEventListener('click', () => toggle(si, ii));
+      list.appendChild(div);
+    });
+  });
+}
+
+function toggle(si, ii) {
+  checked[si][ii] = !checked[si][ii];
+  const el = document.getElementById(`item-${si}-${ii}`);
+  el.classList.toggle('checked', checked[si][ii]);
+  updateSectionScore(si);
+}
+
+function updateSectionScore(si) {
+  const score = checked[si].filter(Boolean).length;
+  document.getElementById(`score-display-${si}`).textContent = `${score} / 5`;
+  for (let i = 0; i < 5; i++) {
+    document.getElementById(`dot-${si}-${i}`).classList.toggle('filled', i < score);
+  }
+}
+
+function getTotal() {
+  return checked.flat().filter(Boolean).length;
+}
+
+function getSectionScore(si) {
+  return checked[si].filter(Boolean).length;
+}
+
+// ── NAVIGATION ──────────────────────────────────────────
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  const el = document.getElementById(id);
+  el.classList.add('active');
+  window.scrollTo(0, 0);
+  updateProgress(id);
+}
+
+function updateProgress(screenId) {
+  const map = {
+    'screen-cover': 0,
+    'screen-0': 15,
+    'screen-1': 30,
+    'screen-2': 50,
+    'screen-3': 70,
+    'screen-4': 88,
+    'screen-results': 100
+  };
+  document.getElementById('progressFill').style.width = (map[screenId] || 0) + '%';
+}
+
+function startQuiz()   { showScreen('screen-0'); }
+function nextSection(i){ showScreen(i < 4 ? `screen-${i+1}` : 'screen-results'); }
+function prevSection(i){ showScreen(i > 0 ? `screen-${i-1}` : 'screen-cover'); }
+
+// ── RESULTS ──────────────────────────────────────────────
+function showResults() {
+  const total = getTotal();
+
+  // Band config
+  let band;
+  if (total >= 20)      band = { label: "Ready to Launch",   cls: "bg-green", desc: "You are market-ready. The remaining gaps are refinements, not blockers. Book a session with Aasha to sharpen your pitch and interview technique — and move faster.", note: "You have done the hard work. Your foundation is strong. What I can do for you now is help you compress the time between where you are and where you want to be. One focused session can save you weeks of trial and error." };
+  else if (total >= 13) band = { label: "Strong Foundation", cls: "bg-teal",  desc: "Solid base with clear, identifiable gaps. Focus on your lowest-scoring section first. Four to six weeks of targeted effort will move you fully into ready territory.", note: "You are closer than you think. I was in exactly this position — most things in place but a few gaps holding me back. Identifying what to fix first made everything click into place quickly." };
+  else if (total >= 7)  band = { label: "Building Momentum", cls: "bg-gold",  desc: "You have started, and knowing your gaps clearly is real progress. A focused 30-day plan will create meaningful movement. Do not underestimate how quickly things can shift.", note: "When I first mapped my own readiness, I was in this range. The most important thing I did was stop doing everything at once and focus on one gap at a time. That shift changed everything." };
+  else                  band = { label: "Start Here",         cls: "bg-red",   desc: "This audit has just saved you months of misdirected effort. You now have a precise map of what to build. Every expert started at zero. The only mistake is not starting.", note: "I moved to Dubai with zero local contacts and very little idea of how this market worked. I got hired in 30 days. Not because I had everything figured out — but because I was honest about my gaps and fixed them one by one. That is exactly what this is for." };
+
+  // Lowest section
+  const scores = sectionNames.map((n, i) => ({ name: n, score: getSectionScore(i) }));
+  const lowest = scores.reduce((a, b) => a.score <= b.score ? a : b);
+
+  // Populate
+  document.getElementById('result-badge').textContent  = `Your result`;
+  document.getElementById('result-badge').className    = `result-badge ${band.cls}`;
+  document.getElementById('result-score-big').textContent = total;
+  document.getElementById('result-label').textContent  = band.label;
+  document.getElementById('result-desc').textContent   = band.desc;
+  document.getElementById('aasha-personalised-note').textContent = `"${band.note}"`;
+
+  // Breakdown
+  const bRows = document.getElementById('breakdown-rows');
+  bRows.innerHTML = '';
+  scores.forEach(s => {
+    const pct = (s.score / 5) * 100;
+    bRows.innerHTML += `
+      <div class="breakdown-row">
+        <div class="breakdown-label">${s.name}</div>
+        <div class="breakdown-bar-wrap">
+          <div class="breakdown-bar-fill" style="width:${pct}%"></div>
+        </div>
+        <div class="breakdown-score">${s.score}/5</div>
+      </div>`;
+  });
+
+  // Gap callout
+  document.getElementById('gap-callout').innerHTML = `
+    <div class="gap-callout-label">Your Biggest Opportunity</div>
+    <div class="gap-callout-text">
+      Your lowest score is <strong>${lowest.name} (${lowest.score}/5)</strong>. 
+      This is your bottleneck — one weak area holds back everything else.
+      Start here before spreading effort across other sections.
+    </div>`;
+
+  showScreen('screen-results');
+}
+
+function retakeQuiz() {
+  checked = Array.from({length: 5}, () => Array(5).fill(false));
+  document.querySelectorAll('.check-item').forEach(el => el.classList.remove('checked'));
+  for (let si = 0; si < 5; si++) updateSectionScore(si);
+  showScreen('screen-cover');
+}
+
+// ── BOOT ─────────────────────────────────────────────────
+buildLists();
+</script>
+</body>
+</html>
